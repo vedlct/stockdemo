@@ -148,10 +148,10 @@
                                                 <th>Style</th>
                                                 <th>SKU</th>
                                                 <th>Product name</th>
-                                                <th >Product description</th>
                                                 <th>Brand name</th>
-                                                <th>Color</th>
-                                                <th>Size</th>
+                                                <th>status</th>
+                                                <th>Last Exported By</th>
+                                                <th>Last Exported Date</th>
                                                 <th style="width: 100px">Action</th>
                                             </tr>
                                         </thead>
@@ -168,13 +168,10 @@
                                                 <td><?php echo $data['style'] ?></td>
                                                 <td><?php echo $data['sku'] ?></td>
                                                 <td><?php echo $data['productName'] ?></td>
-                                                <td width="31%" style="padding: 5px;">
-                                                    <?php echo $data['productDecription'] ?>
-                                                </td>
                                                 <td><?php echo $data['brand'] ?></td>
-                                                <td><?php echo $data['color']; ?></td>
-                                                <td> <?php echo $data['size'];?></td>
-
+                                                <td ><?php echo $data['status'] ?></td>
+                                                <td><?php echo $data['LastExportedBy']; ?></td>
+                                                <td> <?php echo $data['LastExportedDate'];?></td>
 
                                                 <!--                                            <td style="text-align: center">-->
                                                 <?php //echo $sla;
@@ -192,11 +189,11 @@
                                         }
                                         ?>
 
-
                                             </tbody>
 
                                                                              
-</table>
+                                    </table>
+                                        <a href="csv/product.csv" onclick="return myfunc()" download> <button class="waves-effect waves-light btn red"  >Export CSV</button></a>
                                     </div>
 
                                     <div id="base2" style="display: none">
@@ -220,6 +217,19 @@
 </div>
 
                                         <?php include ('js.php') ?>
+        <script>
+            function myfunc() {
+                $.ajax({
+                    type:'POST',
+                    url:'exportcsvforhome.php',
+                    cache: false,
+                    success:function(data)
+                    {
+                       // $('#checkOut').load(document.URL +  ' #checkOut');
+                    }
+                });
+            }
+        </script>
 
                                         <script>
                                             function deletedc(x1) {
