@@ -199,52 +199,89 @@ include ('connection.php')?>
                                 <div class="wizard-content">
                                     <div class="row">
                                         <div class="col m12">
-                                            <div class="row">
-                                                <form method="post" action="csv-explore.php">
-                                                    Data Base field Name :
-                                                    <input type="checkbox" name="check[]" value="category" >Category &nbsp;
-                                                    <input type="checkbox" name="check[]" value="style">Style &nbsp;
-                                                    <input type="checkbox" name="check[]" value="sku" >SKU &nbsp;
-                                                    <input type="checkbox" name="check[]" value="productName">Name &nbsp;
-                                                    <input type="checkbox" name="check[]" value="productDecription" >Description &nbsp;
-                                                    <input type="checkbox" name="check[]" value="brand">Brand &nbsp;
-                                                    <input type="checkbox" name="check[]" value="color" >Color &nbsp;
-                                                    <input type="checkbox" name="check[]" value="size">Size &nbsp;<br><br><br>
+<!--                                            <div class="row">-->
+<!--                                                <form method="post" action="csv-explore.php">-->
+<!--                                                    Data Base field Name :-->
+<!--                                                    <input type="checkbox" name="check[]" value="category" >Category &nbsp;-->
+<!--                                                    <input type="checkbox" name="check[]" value="style">Style &nbsp;-->
+<!--                                                    <input type="checkbox" name="check[]" value="sku" >SKU &nbsp;-->
+<!--                                                    <input type="checkbox" name="check[]" value="productName">Name &nbsp;-->
+<!--                                                    <input type="checkbox" name="check[]" value="productDecription" >Description &nbsp;-->
+<!--                                                    <input type="checkbox" name="check[]" value="brand">Brand &nbsp;-->
+<!--                                                    <input type="checkbox" name="check[]" value="color" >Color &nbsp;-->
+<!--                                                    <input type="checkbox" name="check[]" value="size">Size &nbsp;<br><br><br>-->
+<!---->
+<!---->
+<!--                                                    <div class="input-field col s4">-->
+<!--                                                        <label style="font-size: 0.8rem;-webkit-transform: translateY(-180%);transform: translateY(-180%);">File Name </label>-->
+<!--                                                        <input name="filename" type="text" required placeholder="Type File Name Here">-->
+<!--                                                    </div>-->
+<!---->
+<!--                                                    <div class="input-field col s12">-->
+<!--                                                        <input class="waves-effect waves-light btn red"  type="submit" name="save" value="Make CSV"></input>-->
+<!--                                                    </div>-->
+<!--                                                </form>-->
+<!--                                            </div>-->
 
-
-                                                    <div class="input-field col s4">
-                                                        <label style="font-size: 0.8rem;-webkit-transform: translateY(-180%);transform: translateY(-180%);">File Name </label>
-                                                        <input name="filename" type="text" required placeholder="Type File Name Here">
-                                                    </div>
-
-                                                    <div class="input-field col s12">
-                                                        <input class="waves-effect waves-light btn red"  type="submit" name="save" value="Make CSV"></input>
-                                                    </div>
-                                                </form>
+                                            <div id="drpdwn"  class="input-field col s2">
+                                                <label >File Type</label> <br><br>
+                                                <select id="status" name="status" onchange="showhide()">
+                                                    <option value="">Select File Type</option>
+                                                    <option value="offerfile">Offer File</option>
+                                                    <option value="productfile">Product File</option></select>
                                             </div>
                                         </div>
-                                        <div class="col m6">
-                                            <h3>Generated CSV File</h3>
+                                        <div class="col-md-12">
+                                            <div id="ofer">
+                                            <h5>Offer File</h5>
                                             <table>
                                                 <thead>
                                                     <tr>
                                                         <td>SL.</td>
-                                                        <td>File Name</td>
-                                                        <td>Create Date</td>
+                                                        <td>Category</td>
+                                                        <td>Sku</td>
+                                                        <td>price</td>
+                                                        <td>State</td>
+                                                        <td>Quantity</td>
+                                                        <td>Product-Id-Type</td>
+                                                        <td>Discount Price</td>
+                                                        <td>Discount Start Date</td>
+                                                        <td>Discount End Date</td>
                                                         <td>Action</td>
                                                     </tr>
                                                 </thead>
                                                 <tbody>
                                                     <?php
                                                         $sl=1;
-                                                        $sqlcsv = mysqli_query($con,"SELECT * FROM `csvfile`");
+                                                        $sqlcsv = mysqli_query($con,"SELECT * FROM `offer`");
                                                         while ($file=mysqli_fetch_assoc($sqlcsv)) {
                                                             ?>
                                                             <tr>
                                                                 <td><?php echo $sl ?></td>
-                                                                <td><?php echo $file['name'].".csv" ?></td>
-                                                                <td><?php echo $file['createtime'] ?></td>
-                                                                <td><a href="<?php echo $file['filelocation'] ?>" download>download</a></td>
+
+                                                                <td><?php echo $file['category'] ?></td>
+                                                                <td><?php echo $file['sku'] ?></td>
+                                                                <td><?php echo $file['price'] ?></td>
+                                                                <td><?php echo $file['state'] ?></td>
+
+                                                                <td><?php echo $file['quanity'] ?></td>
+
+
+
+                                                                <td><?php echo $file['productidtype'] ?></td>
+
+                                                                <td><?php echo $file['disprice'] ?></td>
+                                                                <td><?php echo $file['disstartdate'] ?></td>
+                                                                <td><?php echo $file['disenddate'] ?></td>
+                                                                <td><a href="#"> <i class="fa fa-pencil-square-o"
+                                                                                                                                          aria-hidden="true"
+                                                                                                                                          style="color: red"></i></a> &nbsp;&nbsp;&nbsp;
+                                                                    <a data-panel-id=">" id="myBtn2" > <i
+                                                                                class="fa fa-trash-o" aria-hidden="true"
+                                                                                style="color: red"></i></a> &nbsp;&nbsp;&nbsp;
+                                                                </td>
+
+
                                                             </tr>
                                                             <?php
                                                             $sl++;
@@ -252,6 +289,64 @@ include ('connection.php')?>
                                                     ?>
                                                 </tbody>
                                             </table>
+                                            <a href="insertofer.php" > <button class="waves-effect waves-light btn red"  >Create Offer</button></a>
+                                            </div>
+                                            <div id="product" style="display: none">
+                                                <h5>Product File</h5>
+                                                <table class="responsive-table bordered">
+                                                    <thead>
+                                                    <tr>
+                                                        <th>SL</th>
+                                                        <th >Product Category</th>
+                                                        <th>Style</th>
+                                                        <th>SKU</th>
+                                                        <th>Product name</th>
+                                                        <th>Brand name</th>
+                                                        <th>status</th>
+                                                        <th>Last Exported By</th>
+                                                        <th>Last Exported Date</th>
+                                                        <th style="width: 100px">Action</th>
+                                                    </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                    <?php
+
+                                                    $sl = 1;
+                                                    $sql1= mysqli_query($con,"SELECT * FROM `productinfo`");
+                                                    while ($data=mysqli_fetch_assoc($sql1)) {
+                                                        ?>
+                                                        <tr>
+                                                            <td><?php echo $sl ?></td>
+                                                            <td><?php echo $data['category'];?></td>
+                                                            <td><?php echo $data['style'] ?></td>
+                                                            <td><?php echo $data['sku'] ?></td>
+                                                            <td><?php echo $data['productName'] ?></td>
+                                                            <td><?php echo $data['brand'] ?></td>
+                                                            <td ><?php echo $data['status'] ?></td>
+                                                            <td><?php echo $data['LastExportedBy']; ?></td>
+                                                            <td> <?php echo $data['LastExportedDate'];?></td>
+
+                                                            <!--                                            <td style="text-align: center">-->
+                                                            <?php //echo $sla;
+                                                            ?><!--</td>-->
+                                                            <td><a href="editBarcodeForm-wizard.php?id=<?php echo $data['id'] ?>"> <i class="fa fa-pencil-square-o"
+                                                                                                                                      aria-hidden="true"
+                                                                                                                                      style="color: red"></i></a> &nbsp;&nbsp;&nbsp;
+                                                                <a data-panel-id="<?php echo $data['id'];?>" id="myBtn2" onClick="deletedc(this)"> <i
+                                                                            class="fa fa-trash-o" aria-hidden="true"
+                                                                            style="color: red"></i></a> &nbsp;&nbsp;&nbsp;
+                                                            </td>
+                                                        </tr>
+                                                        <?php
+                                                        $sl++;
+                                                    }
+                                                    ?>
+
+                                                    </tbody>
+
+
+                                                </table>
+                                            </div>
                                         </div>
                                         <?php
                                         error_reporting(0);
@@ -350,7 +445,18 @@ include ('connection.php')?>
 <!-- Javascripts -->
 <?php include ('js.php') ?>
 
-
+<script>
+    function showhide(){
+        var x  = document.getElementById("status").value;
+        if (x == 'offerfile'){
+            document.getElementById("product").style.display = "none";
+            document.getElementById("ofer").style.display = "block";
+        }else {
+            document.getElementById("ofer").style.display = "none";
+            document.getElementById("product").style.display = "block";
+        }
+    }
+</script>
 
 <script>
 
