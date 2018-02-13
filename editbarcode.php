@@ -76,48 +76,7 @@ extract($_POST);
 
 
 
-    <aside id="slide-out" class="side-nav white fixed">
-        <div class="side-nav-wrapper">
-            <div class="sidebar-profile">
-                <div class="sidebar-profile-image">
-                    <img src="assets/images/afra.png" class="circle" alt="" >
-                    <br>
-                </div>
-                <div class="sidebar-profile-info">
-                    <a href="javascript:void(0);" class="account-settings-link">
-                        <p>Admin<i class="material-icons right">arrow_drop_down</i></p>
-
-                    </a>
-                </div>
-
-            </div>
-            <div class="sidebar-account-settings">
-                <ul>
-
-                    <li class="divider"></li>
-                    <li class="no-padding">
-                        <a class="waves-effect waves-grey"><i class="material-icons">exit_to_app</i>Sign Out</a>
-                    </li>
-                </ul>
-            </div>
-            <ul id="menu" class="sidebar-menu collapsible collapsible-accordion" data-collapsible="accordion">
-                <li class="no-padding "><a class="waves-effect waves-grey " href="home.php"><i class="material-icons">settings_input_svideo</i>Product List:</a></li>
-                <li class="no-padding " >
-                    <a href="form-wizard.php" class="collapsible-header waves-effect waves-grey"><i class="material-icons">apps</i>New Barcode</a>
-
-                </li>
-                <li class="no-padding">
-                    <a href="adduser.php" class="collapsible-header waves-effect waves-grey"><i class="material-icons">add</i>Add New User</a>
-
-                </li>
-
-            </ul>
-            <div class="footer">
-                <p class="copyright">Tech Cloud Ltd. ©</p>
-                <a href="#!">Privacy</a> &amp; <a href="#!">Terms</a>
-            </div>
-        </div>
-    </aside>
+    <?php include ('menu.php') ?>
     <main class="mn-inner">
         <div class="row">
             <div class="col s12 m12 l12">

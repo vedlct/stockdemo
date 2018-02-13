@@ -74,62 +74,8 @@
             </header>
 
 
-            <aside id="slide-out" class="side-nav white fixed">
-                <div class="side-nav-wrapper">
-                    <div class="sidebar-profile">
-                        <div class="sidebar-profile-image">
-                            <img style="width: 80%;" src="assets/images/dummmylogo.png" class="circle" alt="">
-                            <br>
-                        </div>
-                        <div class="sidebar-profile-info">
-                            <a href="javascript:void(0);" class="account-settings-link">
-                                <p>Admin<i class="material-icons right">arrow_drop_down</i></p>
+   <?php include ('menu.php') ?>
 
-                            </a>
-                        </div>
-
-                    </div>
-                    <div class="sidebar-account-settings">
-                        <ul>
-
-                            <li class="divider"></li>
-                            <li class="no-padding">
-                                <a href="logout.php" class="waves-effect waves-grey"><i class="material-icons">exit_to_app</i>Sign Out</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <ul  class="sidebar-menu collapsible collapsible-accordion" data-collapsible="accordion">
-                        <li class="no-padding">
-                            <a href="stock.php" class="collapsible-header waves-effect waves-grey"><i class="material-icons">apps</i>homepage</a>
-
-                        </li>
-                        <li class="no-padding "><a class="waves-effect waves-grey " href="home.php"><i class="material-icons">settings_input_svideo</i>Product List</a></li>
-                        <li class="no-padding">
-                            <a href="form-wizard.php" class="collapsible-header waves-effect waves-grey"><i class="material-icons">apps</i>SKU Input</a>
-
-                        </li>
-
-                        <li class="no-padding">
-                            <a  href="csv-explore.php" class="collapsible-header waves-effect waves-grey"><i class="material-icons">add</i>Historic uploaded files</a>
-
-                        </li>
-
-
-
-
-                        <li class="no-padding">
-                            <a href="category.php" class="collapsible-header waves-effect waves-grey"><i class="material-icons">apps</i>Settings</a>
-
-                        </li>
-
-
-                    </ul>
-                    <div class="footer">
-                        <p class="copyright">Demo Company ©</p>
-                        <a href="#!">Privacy</a> &amp; <a href="#!">Terms</a>
-                    </div>
-                </div>
-            </aside>
             <main class="mn-inner inner-active-sidebar">
                 <div class="middle-content">
 
@@ -209,8 +155,8 @@
                                     <div id="base1">
                                     <table class="responsive-table bordered">
                                         <thead>
-                                            <tr>
-                                                <th>SL</th>
+                                            <tr style="color: #00aba9">
+                                                <th>Select</th>
                                                 <th >Product Category</th>
                                                 <th>Style</th>
                                                 <th>SKU</th>
@@ -230,7 +176,7 @@
                                         while ($data=mysqli_fetch_assoc($sql1)) {
                                             ?>
                                             <tr>
-                                                <td><?php echo $sl ?></td>
+                                                <td><input type="checkbox"></td>
                                                 <td><?php echo $data['category'];?></td>
                                                 <td><?php echo $data['style'] ?></td>
                                                 <td><?php echo $data['sku'] ?></td>
@@ -260,7 +206,7 @@
 
                                                                              
                                     </table>
-                                        <a href="csv/product.csv" onclick="return myfunc()" download> <button class="waves-effect waves-light btn red"  >Historic uploaded files</button></a>
+                                        <a href="csv/product.csv" onclick="return myfunc()" download> <button class="waves-effect waves-light btn red"  >Export Product file</button></a>
                                     </div>
 
                                     <div id="base2" style="display: none">

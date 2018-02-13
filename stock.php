@@ -110,60 +110,7 @@
 
 
 
-        <aside id="slide-out" class="side-nav white fixed">
-            <div class="side-nav-wrapper">
-                <div class="sidebar-profile">
-                    <div class="sidebar-profile-image">
-                        <img style="width: 80%;" src="assets/images/dummmylogo.png" class="circle" alt="">
-                        <br>
-                    </div>
-                    <div class="sidebar-profile-info">
-                        <a href="javascript:void(0);" class="account-settings-link">
-                            <p>Admin<i class="material-icons right">arrow_drop_down</i></p>
-
-                        </a>
-                    </div>
-
-                </div>
-                <div class="sidebar-account-settings">
-                    <ul>
-
-                        <li class="divider"></li>
-                        <li class="no-padding">
-                            <a href="logout.php" class="waves-effect waves-grey"><i class="material-icons">exit_to_app</i>Sign Out</a>
-                        </li>
-                    </ul>
-                </div>
-                <ul class="sidebar-menu collapsible collapsible-accordion" data-collapsible="accordion">
-                    <li class="no-padding active">
-                        <a href="stock.php" class="collapsible-header waves-effect waves-grey"><i class="material-icons">apps</i>homepage</a>
-
-                    </li>
-                    <li class="no-padding "><a class="waves-effect waves-grey " href="home.php"><i class="material-icons">settings_input_svideo</i>Product List</a></li>
-                    <li class="no-padding">
-                        <a href="form-wizard.php" class="collapsible-header waves-effect waves-grey"><i class="material-icons">apps</i>SKU  Input</a>
-
-                    </li>
-
-                    <li class="no-padding">
-                        <a  href="csv-explore.php" class="collapsible-header waves-effect waves-grey"><i class="material-icons">add</i>Historic uploaded files</a>
-
-                    </li>
-
-
-
-                    <li class="no-padding">
-                        <a href="category.php" class="collapsible-header waves-effect waves-grey"><i class="material-icons">apps</i>Category</a>
-
-                    </li>
-
-                </ul>
-                <div class="footer">
-                    <p class="copyright">Demo Company ©</p>
-                    <a href="#!">Privacy</a> &amp; <a href="#!">Terms</a>
-                </div>
-            </div>
-        </aside>
+    <?php include ('menu.php') ?>
         <main class="mn-inner inner-active-sidebar">
             <div class="middle-content">
 
@@ -174,15 +121,15 @@
 
                                 <span class="card-title">Stock</span>
                                 <table border="1" >
-                                    <tr>
+                                    <tr style="color: #00aba9">
                                     <th>Product Name</th>
                                     <th>Category</th>
                                     <th> Colour</th>
                                     <th>Size</th>
                                     <th>Price </th>
                                     <th>Stock</th>
-                                    <th>Available</th>
                                     <th>Remaining Stock</th>
+                                    <th>Action </th>
                                     </tr>
                                         <tbody>
                                         <tr>
@@ -194,7 +141,7 @@
                                             <td>350</td>
                                             <td>20</td>
                                             <td>12</td>
-                                            <td>8</td>
+                                            <td> <a href="editBarcodeForm-wizard.php?id=2">Details</a> </td>
                                         </tr>
                                     <tr>
 
@@ -204,8 +151,8 @@
                                         <td>M</td>
                                         <td>150</td>
                                         <td>10</td>
-                                        <td>2</td>
                                         <td>8</td>
+                                        <td> <a href="editBarcodeForm-wizard.php?id=2">Details</a> </td>
                                     </tr>
                                     <tr>
 
@@ -216,7 +163,7 @@
                                         <td>50</td>
                                         <td>30</td>
                                         <td>15</td>
-                                        <td>15</td>
+                                        <td> <a href="editBarcodeForm-wizard.php?id=2">Details</a> </td>
                                     </tr>
                                     </tbody>
 <!--                                    <tbody style="border: 1px solid #ddd;">-->
@@ -405,33 +352,7 @@
 
 
 <!-- Javascripts -->
-                                <script src="assets/plugins/jquery/jquery-2.2.0.min.js"></script>
-                                <script src="assets/plugins/materialize/js/materialize.min.js"></script>
-                                <script src="assets/plugins/material-preloader/js/materialPreloader.min.js"></script>
-                                <!--        <script src="assets/plugins/jquery-blockui/jquery.blockui.js"></script>-->
-                                <!--        <script src="assets/plugins/waypoints/jquery.waypoints.min.js"></script>-->
-                                <!--        <script src="assets/plugins/counter-up-master/jquery.counterup.min.js"></script>-->
-                                <!--        <script src="assets/plugins/jquery-sparkline/jquery.sparkline.min.js"></script>-->
-                                <!--        <script src="assets/plugins/chart.js/chart.min.js"></script>-->
-                                <!--        <script src="assets/plugins/flot/jquery.flot.min.js"></script>-->
-                                <!--        <script src="assets/plugins/flot/jquery.flot.time.min.js"></script>-->
-                                <!--        <script src="assets/plugins/flot/jquery.flot.symbol.min.js"></script>-->
-                                <!--        <script src="assets/plugins/flot/jquery.flot.resize.min.js"></script>-->
-                                <!--        <script src="assets/plugins/flot/jquery.flot.tooltip.min.js"></script>-->
-                                <!--        <script src="assets/plugins/curvedlines/curvedLines.js"></script>-->
-                                <!--        <script src="assets/plugins/peity/jquery.peity.min.js"></script>-->
-                                <script src="assets/js/alpha.min.js"></script>
-                                <script src="assets/js/pages/dashboard.js"></script>
-
-                                <!--<script>-->
-                                <!---->
-                                <!--    if(confirm("Are you sure you want to delete this?"))-->
-                                <!--    {-->
-                                <!--        window.location="delectbarcode.php?id="-->
-                                <!---->
-                                <!--    }-->
-                                <!--</script>-->
-
+                          <?php include ('js.php') ?>
                                 <script>
                                     function deletedc(x1) {
 
