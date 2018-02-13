@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8e4907ad-bb7f-40d5-81d0-fd3b1066bd39" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/form-wizard.php" afterPath="$PROJECT_DIR$/form-wizard.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/home.php" afterPath="$PROJECT_DIR$/home.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/editBarcodeForm-wizard.php" afterPath="$PROJECT_DIR$/editBarcodeForm-wizard.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/updateBarcode.php" afterPath="$PROJECT_DIR$/updateBarcode.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -22,14 +22,36 @@
       <file leaf-file-name="editBarcodeForm-wizard.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/editBarcodeForm-wizard.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1972">
-              <caret line="302" column="48" lean-forward="true" selection-start-line="302" selection-start-column="48" selection-end-line="302" selection-end-column="48" />
+            <state relative-caret-position="2068">
+              <caret line="421" column="10" lean-forward="false" selection-start-line="421" selection-start-column="10" selection-end-line="421" selection-end-column="10" />
               <folding>
-                <marker date="1518517993759" expanded="true" signature="9711:9757" ph="SELECT * FRO... productinfo" />
-                <marker date="1518517993759" expanded="true" signature="9843:9867" ph="SELECT * FRO... category" />
-                <marker date="1518517993759" expanded="true" signature="9953:9982" ph="SELECT * FRO... standardcolor" />
-                <marker date="1518517993759" expanded="true" signature="10068:10097" ph="SELECT * FRO... detailedcolor" />
-                <marker date="1518517993759" expanded="true" signature="10183:10203" ph="SELECT * FRO... size" />
+                <element signature="e#2673#2692#0#HTML" expanded="true" />
+                <element signature="e#8640#8645#0#HTML" expanded="true" />
+                <element signature="e#10422#10514#0#HTML" expanded="true" />
+                <element signature="e#11938#12030#0#HTML" expanded="true" />
+                <element signature="e#12443#12535#0#HTML" expanded="true" />
+                <element signature="e#12939#13031#0#HTML" expanded="true" />
+                <element signature="e#13432#13524#0#HTML" expanded="true" />
+                <element signature="e#13917#14009#0#HTML" expanded="true" />
+                <element signature="e#15271#15363#0#HTML" expanded="true" />
+                <element signature="e#16678#16770#0#HTML" expanded="true" />
+                <element signature="e#18085#18177#0#HTML" expanded="true" />
+                <element signature="e#19056#19148#0#HTML" expanded="true" />
+                <element signature="e#19424#19506#0#HTML" expanded="true" />
+                <element signature="e#19884#19908#0#HTML" expanded="true" />
+                <element signature="e#20091#20183#0#HTML" expanded="true" />
+                <element signature="e#20900#20992#0#HTML" expanded="true" />
+                <element signature="e#21679#21703#0#HTML" expanded="true" />
+                <element signature="e#21886#21978#0#HTML" expanded="true" />
+                <element signature="e#22695#22787#0#HTML" expanded="true" />
+                <element signature="e#23631#23655#0#HTML" expanded="true" />
+                <element signature="e#24474#24480#1#HTML" expanded="true" />
+                <element signature="e#24592#24598#1#HTML" expanded="true" />
+                <marker date="1518522141522" expanded="true" signature="9635:9681" ph="SELECT * FRO... productinfo" />
+                <marker date="1518522141522" expanded="true" signature="9763:9787" ph="SELECT * FRO... category" />
+                <marker date="1518522141522" expanded="true" signature="9869:9898" ph="SELECT * FRO... standardcolor" />
+                <marker date="1518522141522" expanded="true" signature="9980:10009" ph="SELECT * FRO... detailedcolor" />
+                <marker date="1518522141522" expanded="true" signature="10091:10111" ph="SELECT * FRO... size" />
               </folding>
             </state>
           </provider>
@@ -38,8 +60,8 @@
       <file leaf-file-name="form-wizard.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/form-wizard.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="476">
-              <caret line="330" column="0" lean-forward="false" selection-start-line="330" selection-start-column="0" selection-end-line="330" selection-end-column="0" />
+            <state relative-caret-position="51">
+              <caret line="350" column="48" lean-forward="true" selection-start-line="350" selection-start-column="48" selection-end-line="350" selection-end-column="92" />
               <folding>
                 <element signature="e#17593#17685#0#HTML" expanded="true" />
                 <element signature="e#18184#18276#0#HTML" expanded="true" />
@@ -54,7 +76,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="home.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="home.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/home.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="187">
@@ -68,14 +90,18 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="updateBarcode.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="updateBarcode.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/updateBarcode.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+            <state relative-caret-position="473">
+              <caret line="35" column="77" lean-forward="false" selection-start-line="35" selection-start-column="77" selection-end-line="35" selection-end-column="77" />
               <folding>
-                <marker date="1518518580855" expanded="true" signature="1003:1347" ph="UPDATE `prod... " />
-                <marker date="1518518580855" expanded="true" signature="1417:1675" ph="..." />
+                <marker date="1518523602999" expanded="true" signature="828:888" ph="UPDATE `prod... " />
+                <marker date="1518523602999" expanded="true" signature="1043:1109" ph="UPDATE `prod... " />
+                <marker date="1518523602999" expanded="true" signature="1258:1318" ph="UPDATE `prod... " />
+                <marker date="1518523602999" expanded="true" signature="1467:1527" ph="UPDATE `prod... " />
+                <marker date="1518523602999" expanded="true" signature="1778:2040" ph="UPDATE `prod... " />
+                <marker date="1518523602999" expanded="true" signature="2110:2368" ph="..." />
               </folding>
             </state>
           </provider>
@@ -95,8 +121,9 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/form-wizard.php" />
-        <option value="$PROJECT_DIR$/updateBarcode.php" />
         <option value="$PROJECT_DIR$/home.php" />
+        <option value="$PROJECT_DIR$/editBarcodeForm-wizard.php" />
+        <option value="$PROJECT_DIR$/updateBarcode.php" />
       </list>
     </option>
   </component>
@@ -161,12 +188,12 @@
       <option name="presentableId" value="Default" />
       <updated>1518516257777</updated>
       <workItem from="1518516259051" duration="935000" />
-      <workItem from="1518518020002" duration="790000" />
+      <workItem from="1518518020002" duration="3820000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1725000" />
+    <option name="totallyTimeSpent" value="4755000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1612" height="912" extended-state="0" />
@@ -231,10 +258,22 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/home.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="140" column="62" lean-forward="false" selection-start-line="140" selection-start-column="62" selection-end-line="140" selection-end-column="62" />
+          <folding>
+            <marker date="1518518811446" expanded="true" signature="6938:6962" ph="SELECT * FRO... category" />
+            <marker date="1518518811446" expanded="true" signature="8061:8098" ph="SELECT produ... productinfo" />
+            <marker date="1518518811446" expanded="true" signature="10368:10395" ph="SELECT * FRO... productinfo" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/form-wizard.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="330" column="0" lean-forward="false" selection-start-line="330" selection-start-column="0" selection-end-line="330" selection-end-column="0" />
+        <state relative-caret-position="51">
+          <caret line="350" column="48" lean-forward="true" selection-start-line="350" selection-start-column="48" selection-end-line="350" selection-end-column="92" />
           <folding>
             <element signature="e#17593#17685#0#HTML" expanded="true" />
             <element signature="e#18184#18276#0#HTML" expanded="true" />
@@ -248,39 +287,53 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/updateBarcode.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-          <folding>
-            <marker date="1518518580855" expanded="true" signature="1003:1347" ph="UPDATE `prod... " />
-            <marker date="1518518580855" expanded="true" signature="1417:1675" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/editBarcodeForm-wizard.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1972">
-          <caret line="302" column="48" lean-forward="true" selection-start-line="302" selection-start-column="48" selection-end-line="302" selection-end-column="48" />
+        <state relative-caret-position="2068">
+          <caret line="421" column="10" lean-forward="false" selection-start-line="421" selection-start-column="10" selection-end-line="421" selection-end-column="10" />
           <folding>
-            <marker date="1518517993759" expanded="true" signature="9711:9757" ph="SELECT * FRO... productinfo" />
-            <marker date="1518517993759" expanded="true" signature="9843:9867" ph="SELECT * FRO... category" />
-            <marker date="1518517993759" expanded="true" signature="9953:9982" ph="SELECT * FRO... standardcolor" />
-            <marker date="1518517993759" expanded="true" signature="10068:10097" ph="SELECT * FRO... detailedcolor" />
-            <marker date="1518517993759" expanded="true" signature="10183:10203" ph="SELECT * FRO... size" />
+            <element signature="e#2673#2692#0#HTML" expanded="true" />
+            <element signature="e#8640#8645#0#HTML" expanded="true" />
+            <element signature="e#10422#10514#0#HTML" expanded="true" />
+            <element signature="e#11938#12030#0#HTML" expanded="true" />
+            <element signature="e#12443#12535#0#HTML" expanded="true" />
+            <element signature="e#12939#13031#0#HTML" expanded="true" />
+            <element signature="e#13432#13524#0#HTML" expanded="true" />
+            <element signature="e#13917#14009#0#HTML" expanded="true" />
+            <element signature="e#15271#15363#0#HTML" expanded="true" />
+            <element signature="e#16678#16770#0#HTML" expanded="true" />
+            <element signature="e#18085#18177#0#HTML" expanded="true" />
+            <element signature="e#19056#19148#0#HTML" expanded="true" />
+            <element signature="e#19424#19506#0#HTML" expanded="true" />
+            <element signature="e#19884#19908#0#HTML" expanded="true" />
+            <element signature="e#20091#20183#0#HTML" expanded="true" />
+            <element signature="e#20900#20992#0#HTML" expanded="true" />
+            <element signature="e#21679#21703#0#HTML" expanded="true" />
+            <element signature="e#21886#21978#0#HTML" expanded="true" />
+            <element signature="e#22695#22787#0#HTML" expanded="true" />
+            <element signature="e#23631#23655#0#HTML" expanded="true" />
+            <element signature="e#24474#24480#1#HTML" expanded="true" />
+            <element signature="e#24592#24598#1#HTML" expanded="true" />
+            <marker date="1518522141522" expanded="true" signature="9635:9681" ph="SELECT * FRO... productinfo" />
+            <marker date="1518522141522" expanded="true" signature="9763:9787" ph="SELECT * FRO... category" />
+            <marker date="1518522141522" expanded="true" signature="9869:9898" ph="SELECT * FRO... standardcolor" />
+            <marker date="1518522141522" expanded="true" signature="9980:10009" ph="SELECT * FRO... detailedcolor" />
+            <marker date="1518522141522" expanded="true" signature="10091:10111" ph="SELECT * FRO... size" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/home.php">
+    <entry file="file://$PROJECT_DIR$/updateBarcode.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="140" column="62" lean-forward="false" selection-start-line="140" selection-start-column="62" selection-end-line="140" selection-end-column="62" />
+        <state relative-caret-position="473">
+          <caret line="35" column="77" lean-forward="false" selection-start-line="35" selection-start-column="77" selection-end-line="35" selection-end-column="77" />
           <folding>
-            <marker date="1518518811446" expanded="true" signature="6938:6962" ph="SELECT * FRO... category" />
-            <marker date="1518518811446" expanded="true" signature="8061:8098" ph="SELECT produ... productinfo" />
-            <marker date="1518518811446" expanded="true" signature="10368:10395" ph="SELECT * FRO... productinfo" />
+            <marker date="1518523602999" expanded="true" signature="828:888" ph="UPDATE `prod... " />
+            <marker date="1518523602999" expanded="true" signature="1043:1109" ph="UPDATE `prod... " />
+            <marker date="1518523602999" expanded="true" signature="1258:1318" ph="UPDATE `prod... " />
+            <marker date="1518523602999" expanded="true" signature="1467:1527" ph="UPDATE `prod... " />
+            <marker date="1518523602999" expanded="true" signature="1778:2040" ph="UPDATE `prod... " />
+            <marker date="1518523602999" expanded="true" signature="2110:2368" ph="..." />
           </folding>
         </state>
       </provider>
