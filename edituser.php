@@ -102,7 +102,7 @@ include ('connection.php');
                 </ul>
             </div>
             <ul  class="sidebar-menu collapsible collapsible-accordion" data-collapsible="accordion">
-                <li class="no-padding active"><a class="waves-effect waves-grey " href="home.php"><i class="material-icons">settings_input_svideo</i>Home</a></li>
+                <li class="no-padding active"><a class="waves-effect waves-grey " href="home.php"><i class="material-icons">settings_input_svideo</i>Product List:</a></li>
                 <li class="no-padding">
                     <a href="form-wizard.php" class="collapsible-header waves-effect waves-grey"><i class="material-icons">apps</i>New Barcode</a>
 

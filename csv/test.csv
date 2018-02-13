@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 "id","category","style","sku","productName","productDecription","brand","color","size"
 "2","Woman","asdas","asd","sdfsdf","<p>asdasd</p>
 ","asdsad","Blue","6"
@@ -5,3 +6,7 @@
 ","asdgfjh","Red","test"
 "4","Man","sdf","sdf","asfd","<p>asd sdff asdf</p>
 ","asd","Red","test"
+=======
+"category","style"
+"Woman","asdas"
+>>>>>>> 71c643be691a6b711e87dfc60e64de15980db2e1
