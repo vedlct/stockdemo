@@ -106,21 +106,21 @@
                         </li>
 
                         <li class="no-padding">
-                            <a  href="csv-explore.php" class="collapsible-header waves-effect waves-grey"><i class="material-icons">add</i>CSV Export</a>
+                            <a  href="csv-explore.php" class="collapsible-header waves-effect waves-grey"><i class="material-icons">add</i>Historic uploaded files</a>
 
                         </li>
-                        
+
 
                         <li class="no-padding">
                             <a href="stock.php" class="collapsible-header waves-effect waves-grey"><i class="material-icons">apps</i>homepage</a>
 
                         </li>
-                        
+
                         <li class="no-padding">
                             <a href="category.php" class="collapsible-header waves-effect waves-grey"><i class="material-icons">apps</i>Settings</a>
 
                         </li>
-                        
+
 
                     </ul>
                     <div class="footer">
@@ -136,15 +136,13 @@
                         <div class="col s12 m12 l12">
                             <div class="card invoices-card">
                                 <div class="card-content">
-                                    <div>
+                                        <span class="card-title" >Product List</span>
 
-
-                                    <span class="card-title">Product List</span>
-                                    <div class="input-field col s2">
+                                    <div class="input-field col s2" style="margin-top: 30px">
                                         <label >Search</label>
                                         <input  name="line2" type="text" class="required validate" onkeyup="search(this.value)">
                                     </div>
-                                    </div>
+
                                     <div id="drpdwn"  class="input-field col s2">
                                         <label >Status</label> <br>
                                         <select id="status" name="status" onchange="status(this.value)">
@@ -216,10 +214,10 @@
                                                 <th>Style</th>
                                                 <th>SKU</th>
                                                 <th>Product name</th>
-                                                <th >Product description</th>
                                                 <th>Brand name</th>
-                                                <th>Color</th>
-                                                <th>Size</th>
+                                                <th>status</th>
+                                                <th>Last Exported By</th>
+                                                <th>Last Exported Date</th>
                                                 <th style="width: 100px">Action</th>
                                             </tr>
                                         </thead>
@@ -236,13 +234,10 @@
                                                 <td><?php echo $data['style'] ?></td>
                                                 <td><?php echo $data['sku'] ?></td>
                                                 <td><?php echo $data['productName'] ?></td>
-                                                <td width="31%" style="padding: 5px;">
-                                                    <?php echo $data['productDecription'] ?>
-                                                </td>
                                                 <td><?php echo $data['brand'] ?></td>
-                                                <td><?php echo $data['standardcolor']; ?></td>
-                                                <td> <?php echo $data['size'];?></td>
-
+                                                <td ><?php echo $data['status'] ?></td>
+                                                <td><?php echo $data['LastExportedBy']; ?></td>
+                                                <td> <?php echo $data['LastExportedDate'];?></td>
 
                                                 <!--                                            <td style="text-align: center">-->
                                                 <?php //echo $sla;
@@ -260,11 +255,11 @@
                                         }
                                         ?>
 
-
                                             </tbody>
 
                                                                              
-</table>
+                                    </table>
+                                        <a href="csv/product.csv" onclick="return myfunc()" download> <button class="waves-effect waves-light btn red"  >Historic uploaded files</button></a>
                                     </div>
 
                                     <div id="base2" style="display: none">
@@ -288,6 +283,19 @@
 </div>
 
                                         <?php include ('js.php') ?>
+        <script>
+            function myfunc() {
+                $.ajax({
+                    type:'POST',
+                    url:'exportcsvforhome.php',
+                    cache: false,
+                    success:function(data)
+                    {
+                       // $('#checkOut').load(document.URL +  ' #checkOut');
+                    }
+                });
+            }
+        </script>
 
                                         <script>
                                             function deletedc(x1) {

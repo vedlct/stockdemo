@@ -109,7 +109,7 @@ include ('connection.php')?>
                 </li>
 
                 <li class="no-padding">
-                    <a  href="csv-explore.php" class="collapsible-header waves-effect waves-grey"><i class="material-icons">add</i>CSV Export</a>
+                    <a  href="csv-explore.php" class="collapsible-header waves-effect waves-grey"><i class="material-icons">add</i>Historic uploaded files</a>
 
                 </li>
 

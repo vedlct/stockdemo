@@ -109,7 +109,7 @@ include ('connection.php')?>
                 </li>
 
                 <li class="no-padding">
-                    <a  href="csv-explore.php" class="collapsible-header waves-effect waves-grey"><i class="material-icons">add</i>CSV Export</a>
+                    <a  href="csv-explore.php" class="collapsible-header waves-effect waves-grey"><i class="material-icons">add</i>Historic uploaded files</a>
 
                 </li>
 
@@ -355,11 +355,12 @@ include ('connection.php')?>
                                                 $image2=$_FILES["pic4"]["name"];
 
 //                                                move_uploaded_file($swatch,$target_dir) ;
+                                                move_uploaded_file($_FILES["pic1"]["tmp_name"], $target_dir . $swatch);
 
-                                                $target_file = $target_dir . basename($_FILES["pic1"]["name"]);
-                                                $target_file = $target_dir . basename($_FILES["pic2"]["name"]);
-                                                $target_file = $target_dir . basename($_FILES["pic3"]["name"]);
-                                                $target_file = $target_dir . basename($_FILES["pic4"]["name"]);
+//                                                $target_file = $target_dir . basename($_FILES["pic1"]["name"]);
+//                                                $target_file = $target_dir . basename($_FILES["pic2"]["name"]);
+//                                                $target_file = $target_dir . basename($_FILES["pic3"]["name"]);
+//                                                $target_file = $target_dir . basename($_FILES["pic4"]["name"]);
 
                                                 extract($_POST);
                                                 $pdes = mysqli_real_escape_string($con,$pdes);

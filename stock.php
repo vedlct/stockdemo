@@ -142,7 +142,7 @@
                     </li>
 
                     <li class="no-padding">
-                        <a  href="csv-explore.php" class="collapsible-header waves-effect waves-grey"><i class="material-icons">add</i>CSV Export</a>
+                        <a  href="csv-explore.php" class="collapsible-header waves-effect waves-grey"><i class="material-icons">add</i>Historic uploaded files</a>
 
                     </li>
 
@@ -178,6 +178,7 @@
                                     <th>Category</th>
                                     <th> Colour</th>
                                     <th>Size</th>
+                                    <th>Price </th>
                                     <th>Stock</th>
                                     <th>Available</th>
                                     <th>Remaining Stock</th
