@@ -4,7 +4,10 @@
 
     <head>
 
-       <?php include ('head.php') ?>
+       <?php include ('head.php');
+        include ('connection.php');
+       ?>
+
 
     </head>
     <body>
@@ -133,12 +136,77 @@
                         <div class="col s12 m12 l12">
                             <div class="card invoices-card">
                                 <div class="card-content">
+                                    <div>
+
 
                                     <span class="card-title">Product List</span>
                                     <div class="input-field col s2">
                                         <label >Search</label>
                                         <input  name="line2" type="text" class="required validate" onkeyup="search(this.value)">
                                     </div>
+                                    </div>
+                                    <div id="drpdwn"  class="input-field col s2">
+                                        <label >Status</label> <br>
+                                        <select id="status" name="status" onchange="status(this.value)">
+                                            <option value="">--Select Status--</option>
+                                            <option value="ACTIVE">Active</option>
+                                            <option value="INACTIVE">Inactive</option></select>
+                                    </div>
+
+
+
+
+
+                            <?php
+                                    $sql = "SELECT * FROM `category`";
+                                    $result = $con->query($sql);
+                            ?>
+
+                                    <div id="drpdwn" class="input-field col s2">
+                                        <label >Category</label> <br>
+                                        <select id="category" name="category" onchange="category(this.value)">
+                                            <option value="">--Select Category--</option>
+                                            <?php
+                                            if ($result->num_rows > 0) {
+
+                                                while($row = $result->fetch_assoc()) {
+                                                    echo '<option value="'.$row["name"].'">' . $row["name"].'</option>';
+                                                }
+                                            }
+
+
+                                            ?>
+                                        </select>
+                                    </div>
+
+
+                                    <?php
+                                    $sql = "SELECT productName FROM `productinfo`";
+                                    $result = $con->query($sql);
+                                    ?>
+
+                                    <div id="drpdwn" class="input-field col s2">
+                                        <label >Product Name</label><br>
+                                        <select id="pname" name="pname" onchange="pname(this.value)">
+                                            <option value="">--Select Product Name--</option>
+                                            <?php
+                                            if ($result->num_rows > 0) {
+
+                                                while($row = $result->fetch_assoc()) {
+                                                    echo '<option value="'.$row["productName"].'">' . $row["productName"].'</option>';
+                                                }
+                                            }
+
+
+                                            ?>
+                                        </select>
+
+
+                                    </div>
+
+
+
+
                                     <div id="base1">
                                     <table class="responsive-table bordered">
                                         <thead>
@@ -157,7 +225,7 @@
                                         </thead>
                                         <tbody>
                                         <?php
-                                        include ('connection.php');
+
                                         $sl = 1;
                                         $sql1= mysqli_query($con,"SELECT * FROM `productinfo`");
                                         while ($data=mysqli_fetch_assoc($sql1)) {
@@ -172,7 +240,7 @@
                                                     <?php echo $data['productDecription'] ?>
                                                 </td>
                                                 <td><?php echo $data['brand'] ?></td>
-                                                <td><?php echo $data['color']; ?></td>
+                                                <td><?php echo $data['standardcolor']; ?></td>
                                                 <td> <?php echo $data['size'];?></td>
 
 
@@ -245,6 +313,115 @@
                                         </script>
 
                                         <script>
+                                            function pname(str) {
+                                                console.log(str);
+                                                if (str.length==0)
+                                                {
+                                                    document.getElementById('base2').style.display = 'none'
+                                                    document.getElementById("base1").style.display = 'block';
+                                                }
+                                                else {
+                                                    document.getElementById('base1').style.display = 'none'
+                                                    document.getElementById("base2").style.display = 'block';
+
+                                                    if (str == "") {
+                                                        document.getElementById("txtHint").innerHTML = "";
+                                                        return;
+                                                    } else {
+                                                        if (window.XMLHttpRequest) {
+                                                            // code for IE7+, Firefox, Chrome, Opera, Safari
+                                                            xmlhttp = new XMLHttpRequest();
+                                                        } else {
+                                                            // code for IE6, IE5
+                                                            xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+                                                        }
+                                                        xmlhttp.onreadystatechange = function () {
+                                                            if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+                                                                document.getElementById("txtHint").innerHTML = xmlhttp.responseText;
+                                                            }
+                                                        }
+
+                                                        xmlhttp.open("GET", "getProductName.php?q=" + str);
+                                                        xmlhttp.send();
+                                                    }
+                                                }
+
+                                            }
+
+                                            function status(str) {
+                                                console.log(str);
+                                                if (str.length==0)
+                                                {
+                                                    document.getElementById('base2').style.display = 'none'
+                                                    document.getElementById("base1").style.display = 'block';
+                                                }
+                                                else {
+                                                    document.getElementById('base1').style.display = 'none'
+                                                    document.getElementById("base2").style.display = 'block';
+
+                                                    if (str == "") {
+                                                        document.getElementById("txtHint").innerHTML = "";
+                                                        return;
+                                                    } else {
+                                                        if (window.XMLHttpRequest) {
+                                                            // code for IE7+, Firefox, Chrome, Opera, Safari
+                                                            xmlhttp = new XMLHttpRequest();
+                                                        } else {
+                                                            // code for IE6, IE5
+                                                            xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+                                                        }
+                                                        xmlhttp.onreadystatechange = function () {
+                                                            if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+                                                                document.getElementById("txtHint").innerHTML = xmlhttp.responseText;
+                                                            }
+                                                        }
+
+                                                        xmlhttp.open("GET", "getStatus.php?q=" + str);
+                                                        xmlhttp.send();
+                                                    }
+                                                }
+
+
+                                            }
+
+
+                                            function category(str) {
+                                                console.log(str);
+                                                if (str.length==0)
+                                                {
+                                                    document.getElementById('base2').style.display = 'none'
+                                                    document.getElementById("base1").style.display = 'block';
+                                                }
+                                                else {
+                                                    document.getElementById('base1').style.display = 'none'
+                                                    document.getElementById("base2").style.display = 'block';
+
+                                                    if (str == "") {
+                                                        document.getElementById("txtHint").innerHTML = "";
+                                                        return;
+                                                    } else {
+                                                        if (window.XMLHttpRequest) {
+                                                            // code for IE7+, Firefox, Chrome, Opera, Safari
+                                                            xmlhttp = new XMLHttpRequest();
+                                                        } else {
+                                                            // code for IE6, IE5
+                                                            xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+                                                        }
+                                                        xmlhttp.onreadystatechange = function () {
+                                                            if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+                                                                document.getElementById("txtHint").innerHTML = xmlhttp.responseText;
+                                                            }
+                                                        }
+
+                                                        xmlhttp.open("GET", "getCategory.php?q=" + str);
+                                                        xmlhttp.send();
+                                                    }
+                                                }
+
+                                            }
+
+
+
                                             function search(str)
                                             {
                                                 if (str.length==0)

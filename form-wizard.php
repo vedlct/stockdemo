@@ -199,12 +199,14 @@ include ('connection.php')?>
                                         <div class="row">
                                             <div class="col m12">
                                                 <div class="row">
-                                                    <form action="form-wizard.php" method="post">
+                                                    <form action="form-wizard.php" enctype="multipart/form-data" method="post">
                                                         <?php
                                                         include ('connection.php');
                                                         $sql1= mysqli_query($con,"SELECT * FROM `category`");
-                                                        $sql2= mysqli_query($con,"SELECT * FROM `color`");
+                                                        $sql2= mysqli_query($con,"SELECT * FROM `standardcolor`");
+
                                                         $sql3= mysqli_query($con,"SELECT * FROM `size`");
+                                                        $sql4= mysqli_query($con,"SELECT * FROM `detailedcolor`");
                                                         ?>
                                                     <div class="input-field col s6">
                                                         <label style="font-size: 0.8rem;-webkit-transform: translateY(-180%);transform: translateY(-180%);">Product Category</label>
@@ -218,29 +220,42 @@ include ('connection.php')?>
                                                             ?>
                                                         </select>
                                                     </div>
-                                                    <div class="input-field col s6">
+                                                        <div class="input-field col s6">
+                                                            <label >Product Name</label>
+                                                            <input  name="pname" type="text" class="required validate" required>
+
+                                                        </div>
+                                                        <div class="input-field col s6">
                                                             <label >Brand name</label>
                                                             <input  name="brand" type="text" class="required validate" required>
-                                                    </div>
-                                                    <div class="input-field col s6">
-                                                        <label >Style</label>
-                                                        <input  name="style" type="text" class="required validate" required>
-                                                    </div>
-                                                    
+                                                        </div>
+                                                        <div class="input-field col s6">
+                                                            <label >Style</label>
+                                                            <input  name="style" type="text" class="required validate" required>
+                                                        </div>
+                                                        <div class="input-field col s6">
+                                                            <label >SKU</label>
+                                                            <input  name="sku" type="text" class="required validate" required>
+                                                        </div>
+
+                                                        <div class="input-field col s6">
+                                                            <label style="font-size: 0.8rem;-webkit-transform: translateY(-180%);transform: translateY(-180%);">Size</label>
+                                                            <select name="size" required>
+                                                                <option selected disabled value="">Select One</option>
+                                                                <?php
+                                                                while ($data3=mysqli_fetch_assoc($sql3))
+                                                                {
+                                                                    echo "<option value=".$data3['name'].">".$data3['name']."</option>";
+                                                                }
+                                                                ?>
+                                                            </select>
+
+                                                        </div>
+
 
                                                     <div class="input-field col s6">
-                                                        <label >SKU</label>
-                                                        <input  name="sku" type="text" class="required validate" required>
-                                                    </div>
-                                                    <div class="input-field col s6">
-                                                    <label >Product Name</label>
-                                                    <input  name="pname" type="text" class="required validate" required>
-
-                                                    </div>
-
-                                                    <div class="input-field col s6">
-                                                        <label style="font-size: 0.8rem;-webkit-transform: translateY(-180%);transform: translateY(-180%);">Color</label>
-                                                        <select name="color" required>
+                                                        <label style="font-size: 0.8rem;-webkit-transform: translateY(-180%);transform: translateY(-180%);">Standard Color</label>
+                                                        <select name="standardColor" required>
                                                             <option selected disabled value="">Select One</option>
                                                             <?php
                                                             while ($data2=mysqli_fetch_assoc($sql2))
@@ -251,53 +266,79 @@ include ('connection.php')?>
                                                         </select>
 
                                                     </div>
-                                                    <div class="input-field col s6">
-                                                        <label style="font-size: 0.8rem;-webkit-transform: translateY(-180%);transform: translateY(-180%);">Size</label>
-                                                        <select name="size" required>
-                                                            <option selected disabled value="">Select One</option>
-                                                            <?php
-                                                            while ($data3=mysqli_fetch_assoc($sql3))
-                                                            {
-                                                                echo "<option value=".$data3['name'].">".$data3['name']."</option>";
-                                                            }
-                                                            ?>
-                                                        </select>
+                                                        <div class="input-field col s6">
+                                                            <label style="font-size: 0.8rem;-webkit-transform: translateY(-180%);transform: translateY(-180%);">Detailed Color</label>
+                                                            <select name="detailedColor" required>
+                                                                <option selected disabled value="">Select One</option>
+                                                                <?php
+                                                                while ($data4=mysqli_fetch_assoc($sql4))
+                                                                {
+                                                                    echo "<option value=".$data4['colorName'].">".$data4['colorName']."</option>";
+                                                                }
+                                                                ?>
+                                                            </select>
 
-                                                    </div>
+                                                        </div>
+                                                        <div class="input-field col s6">
+                                                            <label style="font-size: 0.8rem;-webkit-transform: translateY(-180%);transform: translateY(-180%);">Status</label>
+                                                            <select name="status" required>
+                                                                <option selected disabled value="">Select One</option>
+                                                                <option   value="Active">Active</option>
+                                                                <option   value="Inactive">Inactive</option>
+
+                                                            </select>
+
+                                                        </div>
+
                                                     <div class="input-field col s12">
                                                             <label style="font-size: 0.8rem;-webkit-transform: translateY(-180%);transform: translateY(-180%);">Product description</label>
                                                             <textarea name="pdes" id="ckeditor" class="ckeditor" style="overflow: hidden; height: 300px; border: 1px solid #ddd; margin-top: 10px;" required>
 
                                                         </textarea>
                                                     </div>
-                                                    <div class="input-field col s6">
+                                                    <div style="margin-top: 15px" class="col s12">
+                                                    <div  class="input-field col s6">
+                                                        <label style="font-size: 0.8rem;-webkit-transform: translateY(-180%);transform: translateY(-180%);">Swatch</label>
                                                         <img src="assets/images/mountains2.jpg" alt="" height="110px">
-                                                    </div>
+
 
                                                     <div class="input-field col s12">
-                                                        <input type="file" name="pic1"  value="upload Image" accept="image/*">
+                                                        <input type="file" name="pic1" value="upload Image" accept="image/*">
                                                     </div>
-                                                    <div class="input-field col s6">
+                                                    </div>
+                                                    <div   class="input-field col s6">
+                                                        <label style="font-size: 0.8rem;-webkit-transform: translateY(-180%);transform: translateY(-180%);">Main Image</label>
                                                         <img src="assets/images/mountains2.jpg" alt="" height="110px">
-                                                    </div>
+
 
                                                     <div class="input-field col s12">
                                                         <input type="file" name="pic2"  value="upload Image" accept="image/*">
                                                     </div>
-                                                    <div class="input-field col s6">
-                                                        <img src="assets/images/mountains2.jpg" alt="" height="110px">
                                                     </div>
+                                                    </div>
+                                                <div style="margin-top: 15px" class="col s12">
+                                                <div  class="input-field col s6">
+                                                    <label style="font-size: 0.8rem;-webkit-transform: translateY(-180%);transform: translateY(-180%);">Outfit</label>
+                                                    <img src="assets/images/mountains2.jpg" alt="" height="110px">
+
 
                                                     <div class="input-field col s12">
-                                                        <input type="file" name="pic3"  value="upload Image" accept="image/*">
+                                                        <input type="file" name="pic3" value="upload Image" accept="image/*">
                                                     </div>
+                                                </div>
+                                                <div   class="input-field col s6">
+                                                    <label style="font-size: 0.8rem;-webkit-transform: translateY(-180%);transform: translateY(-180%);">Image 2</label>
+                                                    <img src="assets/images/mountains2.jpg" alt="" height="110px">
 
-<!--                                                    <div class="input-field col s12">-->
-<!--                                                        <label >Font Size</label>-->
-<!--                                                        <input  name="email" type="text" class="required validate">-->
-<!--                                                    </div>-->
 
                                                     <div class="input-field col s12">
+                                                        <input type="file" name="pic4"  value="upload Image" accept="image/*">
+                                                    </div>
+                                                </div>
+                                            </div>
+
+
+                                                    <div style="margin-top: 40px" class="input-field col s12">
                                                         <input class="waves-effect waves-light btn red"  type="submit" name="save" value="Submit"></input>
                                                     </div>
                                                 </form>
@@ -307,11 +348,23 @@ include ('connection.php')?>
                                             <?php
                                             if (isset($_POST['save']))
                                             {
+                                                $target_dir = "assets/images/productImage/";
+                                                $swatch=$_FILES["pic1"]["name"];
+                                                $mainImage=$_FILES["pic2"]["name"];
+                                                $outfit=$_FILES["pic3"]["name"];
+                                                $image2=$_FILES["pic4"]["name"];
+
+//                                                move_uploaded_file($swatch,$target_dir) ;
+
+                                                $target_file = $target_dir . basename($_FILES["pic1"]["name"]);
+                                                $target_file = $target_dir . basename($_FILES["pic2"]["name"]);
+                                                $target_file = $target_dir . basename($_FILES["pic3"]["name"]);
+                                                $target_file = $target_dir . basename($_FILES["pic4"]["name"]);
 
                                                 extract($_POST);
                                                 $pdes = mysqli_real_escape_string($con,$pdes);
                                                 //echo "INSERT INTO `productinfo`(`category`, `style`, `sku`, `productName`, `productDecription`, `brand`, `color`, `size`) VALUES ('$category','$style','$sku','$pname','$pdes','$brand','$color','$size')";
-                                               $sql = mysqli_query($con,"INSERT INTO `productinfo`(`category`, `style`, `sku`, `productName`, `productDecription`, `brand`, `color`, `size`) VALUES ('$category','$style','$sku','$pname','$pdes','$brand','$color','$size')");
+                                               $sql = mysqli_query($con,"INSERT INTO `productinfo`(`category`, `style`, `sku`, `productName`, `productDecription`, `brand`, `standardcolor`,`detailedcolor`, `size`,`swatch`,`mainImage`,`outfit`,`image2`,`status`) VALUES ('$category','$style','$sku','$pname','$pdes','$brand','$standardColor','$detailedColor','$size','$swatch','$mainImage','$outfit','$image2','$status')");
 
                                                 if($sql)
                                                 {
