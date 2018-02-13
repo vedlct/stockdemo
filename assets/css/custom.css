@@ -7,3 +7,14 @@
     padding-top: 25px;
     width: 100% !important;
 }
+
+
+#namelft {
+    left: 25px;
+    position: absolute;
+}
+
+#drpdwn {
+    margin-bottom: 15px;
+    margin-top: 63px;
+}
