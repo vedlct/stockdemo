@@ -7,7 +7,7 @@ if ( $_SESSION['user'] == Null){
 
 }else{
 include ('connection.php')?>
-<!-- Mirrored from steelcoders.com/alpha/v1.2/ by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 02 Jan 2017 09:52:01 GMT -->
+
 <head>
 
     <?php include ('head.php') ?>
@@ -102,9 +102,13 @@ include ('connection.php')?>
                 </ul>
             </div>
             <ul  class="sidebar-menu collapsible collapsible-accordion" data-collapsible="accordion">
-                <li class="no-padding active"><a class="waves-effect waves-grey " href="home.php"><i class="material-icons">settings_input_svideo</i>Product List:</a></li>
                 <li class="no-padding">
-                    <a href="form-wizard.php" class="collapsible-header waves-effect waves-grey"><i class="material-icons">apps</i>Input Form</a>
+                    <a href="stock.php" class="collapsible-header waves-effect waves-grey"><i class="material-icons">apps</i>homepage</a>
+
+                </li>
+                <li class="no-padding active"><a class="waves-effect waves-grey " href="home.php"><i class="material-icons">settings_input_svideo</i>Product List</a></li>
+                <li class="no-padding">
+                    <a href="form-wizard.php" class="collapsible-header waves-effect waves-grey"><i class="material-icons">apps</i>SKU Input</a>
 
                 </li>
 
@@ -114,10 +118,7 @@ include ('connection.php')?>
                 </li>
 
 
-                <li class="no-padding">
-                    <a href="stock.php" class="collapsible-header waves-effect waves-grey"><i class="material-icons">apps</i>homepage</a>
 
-                </li>
                 <li class="no-padding">
                     <a href="category.php" class="collapsible-header waves-effect waves-grey"><i class="material-icons">apps</i>Category</a>
 
@@ -299,7 +300,7 @@ include ('connection.php')?>
                                                     <div style="margin-top: 15px" class="col s12">
                                                     <div  class="input-field col s6">
                                                         <label style="font-size: 0.8rem;-webkit-transform: translateY(-180%);transform: translateY(-180%);">Swatch</label>
-                                                        <img src="assets/images/mountains2.jpg" alt="" height="110px">
+
 
 
                                                     <div class="input-field col s12">
@@ -308,7 +309,7 @@ include ('connection.php')?>
                                                     </div>
                                                     <div   class="input-field col s6">
                                                         <label style="font-size: 0.8rem;-webkit-transform: translateY(-180%);transform: translateY(-180%);">Main Image</label>
-                                                        <img src="assets/images/mountains2.jpg" alt="" height="110px">
+
 
 
                                                     <div class="input-field col s12">
@@ -319,7 +320,7 @@ include ('connection.php')?>
                                                 <div style="margin-top: 15px" class="col s12">
                                                 <div  class="input-field col s6">
                                                     <label style="font-size: 0.8rem;-webkit-transform: translateY(-180%);transform: translateY(-180%);">Outfit</label>
-                                                    <img src="assets/images/mountains2.jpg" alt="" height="110px">
+
 
 
                                                     <div class="input-field col s12">
@@ -328,7 +329,7 @@ include ('connection.php')?>
                                                 </div>
                                                 <div   class="input-field col s6">
                                                     <label style="font-size: 0.8rem;-webkit-transform: translateY(-180%);transform: translateY(-180%);">Image 2</label>
-                                                    <img src="assets/images/mountains2.jpg" alt="" height="110px">
+
 
 
                                                     <div class="input-field col s12">
@@ -355,12 +356,23 @@ include ('connection.php')?>
                                                 $image2=$_FILES["pic4"]["name"];
 
 //                                                move_uploaded_file($swatch,$target_dir) ;
-                                                move_uploaded_file($_FILES["pic1"]["tmp_name"], $target_dir . $swatch);
+                                                if ($swatch != null) {
+                                                    move_uploaded_file($_FILES["pic1"]["tmp_name"], $target_dir . $swatch);
+                                                }
+                                                if ($mainImage !=null){
+                                                    move_uploaded_file($_FILES["pic2"]["tmp_name"], $target_dir . $mainImage);
+                                                }
+                                                if ($outfit !=null){
+                                                    move_uploaded_file($_FILES["pic3"]["tmp_name"], $target_dir . $outfit);
+                                                }
+                                                if ($image2 !=null){
+                                                    move_uploaded_file($_FILES["pic4"]["tmp_name"], $target_dir . $image2);
+                                                }
 
-//                                                $target_file = $target_dir . basename($_FILES["pic1"]["name"]);
-//                                                $target_file = $target_dir . basename($_FILES["pic2"]["name"]);
-//                                                $target_file = $target_dir . basename($_FILES["pic3"]["name"]);
-//                                                $target_file = $target_dir . basename($_FILES["pic4"]["name"]);
+
+
+
+
 
                                                 extract($_POST);
                                                 $pdes = mysqli_real_escape_string($con,$pdes);
