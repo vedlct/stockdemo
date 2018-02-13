@@ -102,7 +102,7 @@ include ('connection.php')?>
                 </ul>
             </div>
             <ul  class="sidebar-menu collapsible collapsible-accordion" data-collapsible="accordion">
-                <li class="no-padding active"><a class="waves-effect waves-grey " href="home.php"><i class="material-icons">settings_input_svideo</i>Home</a></li>
+                <li class="no-padding active"><a class="waves-effect waves-grey " href="home.php"><i class="material-icons">settings_input_svideo</i>Product List:</a></li>
                 <li class="no-padding">
                     <a href="form-wizard.php" class="collapsible-header waves-effect waves-grey"><i class="material-icons">apps</i>Input Form</a>
 
@@ -115,7 +115,7 @@ include ('connection.php')?>
 
 
                 <li class="no-padding">
-                    <a href="stock.php" class="collapsible-header waves-effect waves-grey"><i class="material-icons">apps</i>Stock Summary</a>
+                    <a href="stock.php" class="collapsible-header waves-effect waves-grey"><i class="material-icons">apps</i>homepage</a>
 
                 </li>
                 <li class="no-padding">
@@ -194,7 +194,7 @@ include ('connection.php')?>
                         <div class="col s12 m12 l12">
                             <div class="card invoices-card">
                                 <div class="card-content">
-                                <span class="card-title">Demo Data</span>
+                                <span class="card-title">Product List</span>
 
                                     <section>
                                         <div class="wizard-content">

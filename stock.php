@@ -97,7 +97,7 @@
                             </a>
                     </section>
                     <div class="header-title col s3 m3">
-                        <span class="chapter-title">Demo</span>
+                        <span class="chapter-title">Baker Leather</span>
 
                     </div>
 
@@ -135,7 +135,7 @@
                     </ul>
                 </div>
                 <ul class="sidebar-menu collapsible collapsible-accordion" data-collapsible="accordion">
-                    <li class="no-padding active"><a class="waves-effect waves-grey " href="home.php"><i class="material-icons">settings_input_svideo</i>Home</a></li>
+                    <li class="no-padding active"><a class="waves-effect waves-grey " href="home.php"><i class="material-icons">settings_input_svideo</i>Product List:</a></li>
                     <li class="no-padding">
                         <a href="form-wizard.php" class="collapsible-header waves-effect waves-grey"><i class="material-icons">apps</i>Input Form</a>
 
@@ -148,7 +148,7 @@
 
 
                     <li class="no-padding">
-                        <a href="stock.php" class="collapsible-header waves-effect waves-grey"><i class="material-icons">apps</i>Stock Summary</a>
+                        <a href="stock.php" class="collapsible-header waves-effect waves-grey"><i class="material-icons">apps</i>homepage</a>
 
                     </li>
                     <li class="no-padding">
@@ -175,18 +175,16 @@
                                 <table border="1" >
                                     <th></th>
                                     <th>Product Name</th>
-                                    
+                                    <th>Category</th>
+                                    <th> Colour</th>
                                     <th>Size</th>
                                     <th>Stock</th>
                                     <th>Available</th>
-                                    <th>Remaining Stock</th>
+                                    <th>Remaining Stock</th
                                     <tbody style="border: 1px solid #ddd;">
-                                        
                                         <tr>
                                             <td>Women</td>
-
                                             <td>
-
                                                 <table >
                                                     <tbody>
                                                         <tr >
@@ -197,7 +195,6 @@
                                                         </tr>
                                                     </tbody>
                                                 </table>
-
                                             </td>
                                             <td>
 
