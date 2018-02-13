@@ -3,12 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="81b5b95c-ac48-4b88-a2f3-c9d1b5d8d0b5" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/category.php" afterPath="$PROJECT_DIR$/category.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/csv-explore.php" afterPath="$PROJECT_DIR$/csv-explore.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/editBarcodeForm-wizard.php" afterPath="$PROJECT_DIR$/editBarcodeForm-wizard.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/form-wizard.php" afterPath="$PROJECT_DIR$/form-wizard.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/home.php" afterPath="$PROJECT_DIR$/home.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/loginchk.php" afterPath="$PROJECT_DIR$/loginchk.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/stock.php" afterPath="$PROJECT_DIR$/stock.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -132,8 +126,8 @@
       <file leaf-file-name="stock.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/stock.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="450">
-              <caret line="319" column="45" lean-forward="true" selection-start-line="319" selection-start-column="45" selection-end-line="319" selection-end-column="45" />
+            <state relative-caret-position="567">
+              <caret line="335" column="61" lean-forward="false" selection-start-line="335" selection-start-column="61" selection-end-line="335" selection-end-column="61" />
               <folding />
             </state>
           </provider>
@@ -165,10 +159,10 @@
         <option value="$PROJECT_DIR$/loginchk.php" />
         <option value="$PROJECT_DIR$/category.php" />
         <option value="$PROJECT_DIR$/editBarcodeForm-wizard.php" />
-        <option value="$PROJECT_DIR$/stock.php" />
         <option value="$PROJECT_DIR$/form-wizard.php" />
         <option value="$PROJECT_DIR$/csv-explore.php" />
         <option value="$PROJECT_DIR$/home.php" />
+        <option value="$PROJECT_DIR$/stock.php" />
       </list>
     </option>
   </component>
@@ -231,12 +225,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1518521502863</updated>
-      <workItem from="1518521505510" duration="1330000" />
+      <workItem from="1518521505510" duration="1610000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1330000" />
+    <option name="totallyTimeSpent" value="1610000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -429,8 +423,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/stock.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="319" column="45" lean-forward="true" selection-start-line="319" selection-start-column="45" selection-end-line="319" selection-end-column="45" />
+        <state relative-caret-position="567">
+          <caret line="335" column="61" lean-forward="false" selection-start-line="335" selection-start-column="61" selection-end-line="335" selection-end-column="61" />
           <folding />
         </state>
       </provider>

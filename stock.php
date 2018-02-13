@@ -317,6 +317,30 @@
                                                 </table>
 
                                             </td>
+                                            <td>
+
+                                                <table>
+                                                    <tr>
+                                                        <td>10</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>48</td>
+                                                    </tr>
+                                                </table>
+
+                                            </td>
+                                            <td>
+
+                                                <table>
+                                                    <tr>
+                                                        <td>8</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>11</td>
+                                                    </tr>
+                                                </table>
+
+                                            </td>
                                         </tr>
 
                                     </tbody>
