@@ -99,28 +99,29 @@
                         </ul>
                     </div>
                     <ul  class="sidebar-menu collapsible collapsible-accordion" data-collapsible="accordion">
-                        <li class="no-padding active"><a class="waves-effect waves-grey " href="home.php"><i class="material-icons">settings_input_svideo</i>Product List:</a></li>
+                        <li class="no-padding">
+                            <a href="stock.php" class="collapsible-header waves-effect waves-grey"><i class="material-icons">apps</i>homepage</a>
+
+                        </li>
+                        <li class="no-padding active"><a class="waves-effect waves-grey " href="home.php"><i class="material-icons">settings_input_svideo</i>Product List</a></li>
                         <li class="no-padding">
                             <a href="form-wizard.php" class="collapsible-header waves-effect waves-grey"><i class="material-icons">apps</i>SKU Input</a>
 
                         </li>
 
                         <li class="no-padding">
-                            <a  href="csv-explore.php" class="collapsible-header waves-effect waves-grey"><i class="material-icons">add</i>CSV Export</a>
+                            <a  href="csv-explore.php" class="collapsible-header waves-effect waves-grey"><i class="material-icons">add</i>Historic uploaded files</a>
 
                         </li>
-                        
 
-                        <li class="no-padding">
-                            <a href="stock.php" class="collapsible-header waves-effect waves-grey"><i class="material-icons">apps</i>homepage</a>
 
-                        </li>
-                        
+
+
                         <li class="no-padding">
                             <a href="category.php" class="collapsible-header waves-effect waves-grey"><i class="material-icons">apps</i>Settings</a>
 
                         </li>
-                        
+
 
                     </ul>
                     <div class="footer">
@@ -138,12 +139,12 @@
                                 <div class="card-content">
                                         <span class="card-title" >Product List</span>
 
-                                    <div class="input-field col s2" style="margin-top: 30px">
+                                    <div style="margin-top: 35px" class="input-field col s2">
                                         <label >Search</label>
-                                        <input  name="line2" type="text" class="required validate" onkeyup="search(this.value)">
+                                        <input name="line2" type="text" class="required validate" onkeyup="search(this.value)">
                                     </div>
 
-                                    <div id="drpdwn"  class="input-field col s2">
+                                    <div   class="input-field col s2">
                                         <label >Status</label> <br>
                                         <select id="status" name="status" onchange="status(this.value)">
                                             <option value="">--Select Status--</option>
@@ -160,7 +161,7 @@
                                     $result = $con->query($sql);
                             ?>
 
-                                    <div id="drpdwn" class="input-field col s2">
+                                    <div  class="input-field col s2">
                                         <label >Category</label> <br>
                                         <select id="category" name="category" onchange="category(this.value)">
                                             <option value="">--Select Category--</option>
@@ -183,7 +184,7 @@
                                     $result = $con->query($sql);
                                     ?>
 
-                                    <div id="drpdwn" class="input-field col s2">
+                                    <div  class="input-field col s2">
                                         <label >Product Name</label><br>
                                         <select id="pname" name="pname" onchange="pname(this.value)">
                                             <option value="">--Select Product Name--</option>
@@ -259,7 +260,7 @@
 
                                                                              
                                     </table>
-                                        <a href="csv/product.csv" onclick="return myfunc()" download> <button class="waves-effect waves-light btn red"  >Export CSV</button></a>
+                                        <a href="csv/product.csv" onclick="return myfunc()" download> <button class="waves-effect waves-light btn red"  >Historic uploaded files</button></a>
                                     </div>
 
                                     <div id="base2" style="display: none">

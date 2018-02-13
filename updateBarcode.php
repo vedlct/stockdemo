@@ -7,12 +7,19 @@ if (isset($_POST['save']))
     $outfit=$_FILES["pic3"]["name"];
     $image2=$_FILES["pic4"]["name"];
 
-    move_uploaded_file($swatch,$target_dir) ;
 
-    $target_file = $target_dir . basename($_FILES["pic1"]["name"]);
-    $target_file = $target_dir . basename($_FILES["pic2"]["name"]);
-    $target_file = $target_dir . basename($_FILES["pic3"]["name"]);
-    $target_file = $target_dir . basename($_FILES["pic4"]["name"]);
+    if ($swatch != null) {
+        move_uploaded_file($_FILES["pic1"]["tmp_name"], $target_dir . $swatch);
+    }
+    if ($mainImage !=null){
+        move_uploaded_file($_FILES["pic2"]["tmp_name"], $target_dir . $mainImage);
+    }
+    if ($outfit !=null){
+        move_uploaded_file($_FILES["pic3"]["tmp_name"], $target_dir . $outfit);
+    }
+    if ($image2 !=null){
+        move_uploaded_file($_FILES["pic4"]["tmp_name"], $target_dir . $image2);
+    }
 
     extract($_GET);
 
