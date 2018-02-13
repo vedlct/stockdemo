@@ -138,12 +138,12 @@
                                 <div class="card-content">
                                         <span class="card-title" >Product List</span>
 
-                                    <div class="input-field col s2" style="margin-top: 30px">
+                                    <div style="margin-top: 35px" class="input-field col s2">
                                         <label >Search</label>
-                                        <input  name="line2" type="text" class="required validate" onkeyup="search(this.value)">
+                                        <input name="line2" type="text" class="required validate" onkeyup="search(this.value)">
                                     </div>
 
-                                    <div id="drpdwn"  class="input-field col s2">
+                                    <div   class="input-field col s2">
                                         <label >Status</label> <br>
                                         <select id="status" name="status" onchange="status(this.value)">
                                             <option value="">--Select Status--</option>
@@ -160,7 +160,7 @@
                                     $result = $con->query($sql);
                             ?>
 
-                                    <div id="drpdwn" class="input-field col s2">
+                                    <div  class="input-field col s2">
                                         <label >Category</label> <br>
                                         <select id="category" name="category" onchange="category(this.value)">
                                             <option value="">--Select Category--</option>
@@ -183,7 +183,7 @@
                                     $result = $con->query($sql);
                                     ?>
 
-                                    <div id="drpdwn" class="input-field col s2">
+                                    <div  class="input-field col s2">
                                         <label >Product Name</label><br>
                                         <select id="pname" name="pname" onchange="pname(this.value)">
                                             <option value="">--Select Product Name--</option>
