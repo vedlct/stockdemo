@@ -404,8 +404,6 @@ include ('connection.php')?>
 
 <script type="text/javascript" src="assets/ckeditor/ckeditor.js"></script>
 
-
-
 <script>
     $(function() {
         var pgurl = window.location.href.
@@ -419,6 +417,7 @@ include ('connection.php')?>
         })
     });
 </script>
+
 </body>
 
 

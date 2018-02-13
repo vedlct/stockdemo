@@ -135,11 +135,11 @@
                     </ul>
                 </div>
                 <ul class="sidebar-menu collapsible collapsible-accordion" data-collapsible="accordion">
-                    <li class="no-padding">
+                    <li class="no-padding active">
                         <a href="stock.php" class="collapsible-header waves-effect waves-grey"><i class="material-icons">apps</i>homepage</a>
 
                     </li>
-                    <li class="no-padding active"><a class="waves-effect waves-grey " href="home.php"><i class="material-icons">settings_input_svideo</i>Product List</a></li>
+                    <li class="no-padding "><a class="waves-effect waves-grey " href="home.php"><i class="material-icons">settings_input_svideo</i>Product List</a></li>
                     <li class="no-padding">
                         <a href="form-wizard.php" class="collapsible-header waves-effect waves-grey"><i class="material-icons">apps</i>SKU  Input</a>
 
@@ -396,22 +396,23 @@
                                         }
                                     }
                                 </script>
-                                <script>
-                                    $(function() {
 
-                                        var pgurl = window.location.href.
-                                        substr(window.location.href.lastIndexOf("/") + 1);
-
-                                        $(".sidebar-menu li").each(function() {
-
-                                            if (pgurl == '') {
-                                                $(".sidebar-menu li:eq(1)").addClass("active");
-                                            } else
-                                            if ($('a', this).attr("href") == pgurl || $('a', this).attr("href") == '')
-                                                $(this).addClass("active");
-                                        })
-                                    });
-                                </script>
+<!--                                <script>-->
+<!--                                    $(function() {-->
+<!---->
+<!--                                        var pgurl = window.location.href.-->
+<!--                                        substr(window.location.href.lastIndexOf("/") + 1);-->
+<!---->
+<!--                                        $(".sidebar-menu li").each(function() {-->
+<!---->
+<!--                                            if (pgurl == '') {-->
+<!--                                                $(".sidebar-menu li:eq(1)").addClass("active");-->
+<!--                                            } else-->
+<!--                                            if ($('a', this).attr("href") == pgurl || $('a', this).attr("href") == '')-->
+<!--                                                $(this).addClass("active");-->
+<!--                                        })-->
+<!--                                    });-->
+<!--                                </script>-->
 </body>
 
 </html>
