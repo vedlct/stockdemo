@@ -102,22 +102,23 @@ include ('connection.php')?>
                 </ul>
             </div>
             <ul  class="sidebar-menu collapsible collapsible-accordion" data-collapsible="accordion">
-                <li class="no-padding active"><a class="waves-effect waves-grey " href="home.php"><i class="material-icons">settings_input_svideo</i>Product List:</a></li>
-                <li class="no-padding">
-                    <a href="form-wizard.php" class="collapsible-header waves-effect waves-grey"><i class="material-icons">apps</i>Input Form</a>
-
-                </li>
-
-                <li class="no-padding">
-                    <a  href="csv-explore.php" class="collapsible-header waves-effect waves-grey"><i class="material-icons">add</i>CSV Export</a>
-
-                </li>
-
-
                 <li class="no-padding">
                     <a href="stock.php" class="collapsible-header waves-effect waves-grey"><i class="material-icons">apps</i>homepage</a>
 
                 </li>
+                <li class="no-padding active"><a class="waves-effect waves-grey " href="home.php"><i class="material-icons">settings_input_svideo</i>Product List</a></li>
+                <li class="no-padding">
+                    <a href="form-wizard.php" class="collapsible-header waves-effect waves-grey"><i class="material-icons">apps</i>SKU Input</a>
+
+                </li>
+
+                <li class="no-padding">
+                    <a  href="csv-explore.php" class="collapsible-header waves-effect waves-grey"><i class="material-icons">add</i>Historic uploaded files</a>
+
+                </li>
+
+
+
                 <li class="no-padding">
                     <a href="category.php" class="collapsible-header waves-effect waves-grey"><i class="material-icons">apps</i>Category</a>
 

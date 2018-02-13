@@ -99,28 +99,29 @@
                         </ul>
                     </div>
                     <ul  class="sidebar-menu collapsible collapsible-accordion" data-collapsible="accordion">
-                        <li class="no-padding active"><a class="waves-effect waves-grey " href="home.php"><i class="material-icons">settings_input_svideo</i>Product List:</a></li>
+                        <li class="no-padding">
+                            <a href="stock.php" class="collapsible-header waves-effect waves-grey"><i class="material-icons">apps</i>homepage</a>
+
+                        </li>
+                        <li class="no-padding active"><a class="waves-effect waves-grey " href="home.php"><i class="material-icons">settings_input_svideo</i>Product List</a></li>
                         <li class="no-padding">
                             <a href="form-wizard.php" class="collapsible-header waves-effect waves-grey"><i class="material-icons">apps</i>SKU Input</a>
 
                         </li>
 
                         <li class="no-padding">
-                            <a  href="csv-explore.php" class="collapsible-header waves-effect waves-grey"><i class="material-icons">add</i>CSV Export</a>
+                            <a  href="csv-explore.php" class="collapsible-header waves-effect waves-grey"><i class="material-icons">add</i>Historic uploaded files</a>
 
                         </li>
-                        
 
-                        <li class="no-padding">
-                            <a href="stock.php" class="collapsible-header waves-effect waves-grey"><i class="material-icons">apps</i>homepage</a>
 
-                        </li>
-                        
+
+
                         <li class="no-padding">
                             <a href="category.php" class="collapsible-header waves-effect waves-grey"><i class="material-icons">apps</i>Settings</a>
 
                         </li>
-                        
+
 
                     </ul>
                     <div class="footer">
@@ -259,7 +260,7 @@
 
                                                                              
                                     </table>
-                                        <a href="csv/product.csv" onclick="return myfunc()" download> <button class="waves-effect waves-light btn red"  >Export CSV</button></a>
+                                        <a href="csv/product.csv" onclick="return myfunc()" download> <button class="waves-effect waves-light btn red"  >Historic uploaded files</button></a>
                                     </div>
 
                                     <div id="base2" style="display: none">
