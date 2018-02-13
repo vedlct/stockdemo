@@ -1,0 +1,9 @@
+/* Write your custom CSS here */
+
+
+.middle-content {
+    float: left;
+    padding-right: 25px;
+    padding-top: 25px;
+    width: 100% !important;
+}
