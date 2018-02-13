@@ -62,7 +62,7 @@
                             </a>
                         </section>
                         <div class="header-title col s3 m3">      
-                            <span class="chapter-title">Demo</span>
+                            <span class="chapter-title">Baker Leather</span>
 
                         </div>
 
@@ -99,7 +99,7 @@
                         </ul>
                     </div>
                     <ul  class="sidebar-menu collapsible collapsible-accordion" data-collapsible="accordion">
-                        <li class="no-padding active"><a class="waves-effect waves-grey " href="home.php"><i class="material-icons">settings_input_svideo</i>Home</a></li>
+                        <li class="no-padding active"><a class="waves-effect waves-grey " href="home.php"><i class="material-icons">settings_input_svideo</i>Product List:</a></li>
                         <li class="no-padding">
                             <a href="form-wizard.php" class="collapsible-header waves-effect waves-grey"><i class="material-icons">apps</i>SKU Input</a>
 
@@ -112,7 +112,7 @@
                         
 
                         <li class="no-padding">
-                            <a href="stock.php" class="collapsible-header waves-effect waves-grey"><i class="material-icons">apps</i>Stock Summary</a>
+                            <a href="stock.php" class="collapsible-header waves-effect waves-grey"><i class="material-icons">apps</i>homepage</a>
 
                         </li>
                         
@@ -138,9 +138,10 @@
                                 <div class="card-content">
                                     <div>
 
-                                    <span id="namelft" class="card-title">Demo Data</span>
-                                    <div style="margin-top: 84px;" class="input-field col s2">
-                                        <label  >Search</label>
+
+                                    <span class="card-title">Product List</span>
+                                    <div class="input-field col s2">
+                                        <label >Search</label>
                                         <input  name="line2" type="text" class="required validate" onkeyup="search(this.value)">
                                     </div>
                                     </div>
