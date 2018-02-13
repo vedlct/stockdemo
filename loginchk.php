@@ -13,7 +13,7 @@ if ($rows == 1) {
 
     ?>
 <script>
-    window.location="home.php";
+    window.location="stock.php";
 </script>
 <?php
 }else {

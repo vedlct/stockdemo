@@ -360,23 +360,23 @@ include ('connection.php')?>
 <?php include ('js.php') ?>
 
 
-<script>
-
-    $(function() {
-
-        var pgurl = window.location.href.
-        substr(window.location.href.lastIndexOf("/")+1);
-
-        $(".menu li").each(function(){
-
-            if(pgurl==''){
-                $(".nav li:eq(1)").addClass("active");
-            }else
-            if($('a',this).attr("href") == pgurl || $('a', this).attr("href") == '')
-                $(this).addClass("active");
-        })
-    });
-</script>
+<!--<script>-->
+<!---->
+<!--    $(function() {-->
+<!---->
+<!--        var pgurl = window.location.href.-->
+<!--        substr(window.location.href.lastIndexOf("/")+1);-->
+<!---->
+<!--        $(".menu li").each(function(){-->
+<!---->
+<!--            if(pgurl==''){-->
+<!--                $(".nav li:eq(1)").addClass("active");-->
+<!--            }else-->
+<!--            if($('a',this).attr("href") == pgurl || $('a', this).attr("href") == '')-->
+<!--                $(this).addClass("active");-->
+<!--        })-->
+<!--    });-->
+<!--</script>-->
 </body>
 
 
