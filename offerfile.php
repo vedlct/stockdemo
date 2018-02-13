@@ -7,11 +7,12 @@ if ( $_SESSION['user'] == Null){
 
 }else{
 include ('connection.php')?>
-<!-- Mirrored from steelcoders.com/alpha/v1.2/ by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 02 Jan 2017 09:52:01 GMT -->
+
 <head>
 
     <?php include ('head.php') ?>
-
+    <script src="http://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="http://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 </head>
 <body>
 <div class="loader-bg"></div>
