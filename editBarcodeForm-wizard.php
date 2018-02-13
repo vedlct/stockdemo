@@ -4,12 +4,9 @@
 error_reporting(0);
 session_start();
 if ( $_SESSION['user'] == Null){
-
 }else{
 include ('connection.php')?>
-
 <head>
-
     <?php include ('head.php') ?>
 
 </head>
@@ -108,6 +105,7 @@ include ('connection.php')?>
 
                 </li>
                 <li class="no-padding active"><a class="waves-effect waves-grey " href="home.php"><i class="material-icons">settings_input_svideo</i>Product List</a></li>
+
                 <li class="no-padding">
                     <a href="form-wizard.php" class="collapsible-header waves-effect waves-grey"><i class="material-icons">apps</i>Input Form</a>
 
@@ -124,9 +122,9 @@ include ('connection.php')?>
 
                 </li>
                 <li class="no-padding">
-                            <a href="category.php" class="collapsible-header waves-effect waves-grey"><i class="material-icons">apps</i>Category</a>
+                    <a href="category.php" class="collapsible-header waves-effect waves-grey"><i class="material-icons">apps</i>Category</a>
 
-                        </li>
+                </li>
                 <!--<li class="no-padding">-->
                 <!--<a class="collapsible-header waves-effect waves-grey"><i class="material-icons">star_border</i>Plugins<i class="nav-drop-icon material-icons">keyboard_arrow_right</i></a>-->
                 <!--<div class="collapsible-body">-->
@@ -198,187 +196,186 @@ include ('connection.php')?>
                 <div class="card">
                     <div class="card-content">
 
-                            <div>
-                                <h5>Edit Barcode</h5>
-                                <section>
-                                    <div class="wizard-content">
-                                        <div class="row">
-                                            <div class="col m12">
-                                                <div class="row">
-                                                    <form enctype="multipart/form-data" method="post">
-                                                        <?php
-                                                        include ('connection.php');
-                                                        extract($_GET);
-                                                        $sql = mysqli_query($con,"SELECT * FROM `productinfo` WHERE `id` = '$id'");
-                                                        $sql1= mysqli_query($con,"SELECT * FROM `category`");
-                                                        $sql2= mysqli_query($con,"SELECT * FROM `standardcolor`");
-                                                        $sql4= mysqli_query($con,"SELECT * FROM `detailedcolor`");
-                                                        $sql3= mysqli_query($con,"SELECT * FROM `size`");
-
-                                                        while ($row=mysqli_fetch_assoc($sql)) {
-                                                            ?>
-                                                            <div class="input-field col s6">
-                                                                <label style="font-size: 0.8rem;-webkit-transform: translateY(-180%);transform: translateY(-180%);">Product Category</label>
-                                                                <select name="category" required>
-                                                                    <option selected disabled value="">Select One
-                                                                    </option>
-                                                                    <?php
-                                                                    while ($data1 = mysqli_fetch_assoc($sql1)) {
-                                                                        ?>
-                                                                        <option value="<?php echo $data1['name']; ?>"
-                                                                                <?php if ($data1['name'] == $row['category']){ ?>selected<?php } else {
-                                                                        } ?>><?php echo $data1['name']; ?></option>
-                                                                        <?php
-                                                                    }
+                        <div>
+                            <h5>Edit Barcode</h5>
+                            <section>
+                                <div class="wizard-content">
+                                    <div class="row">
+                                        <div class="col m12">
+                                            <div class="row">
+                                                <form enctype="multipart/form-data" method="post">
+                                                    <?php
+                                                    include ('connection.php');
+                                                    extract($_GET);
+                                                    $sql = mysqli_query($con,"SELECT * FROM `productinfo` WHERE `id` = '$id'");
+                                                    $sql1= mysqli_query($con,"SELECT * FROM `category`");
+                                                    $sql2= mysqli_query($con,"SELECT * FROM `standardcolor`");
+                                                    $sql4= mysqli_query($con,"SELECT * FROM `detailedcolor`");
+                                                    $sql3= mysqli_query($con,"SELECT * FROM `size`");
+                                                    while ($row=mysqli_fetch_assoc($sql)) {
+                                                        ?>
+                                                        <div class="input-field col s6">
+                                                            <label style="font-size: 0.8rem;-webkit-transform: translateY(-180%);transform: translateY(-180%);">Product Category</label>
+                                                            <select name="category" required>
+                                                                <option selected disabled value="">Select One
+                                                                </option>
+                                                                <?php
+                                                                while ($data1 = mysqli_fetch_assoc($sql1)) {
                                                                     ?>
-                                                                </select>
-                                                            </div>
-                                                            <div class="input-field col s6">
-                                                                <label style="font-size: 0.8rem;-webkit-transform: translateY(-180%);transform: translateY(-180%);">Product Name</label>
-                                                                <input name="pname" type="text" value="<?php echo $row['productName']; ?>" class="required validate" required>
-
-                                                            </div>
-                                                            <div class="input-field col s6">
-                                                                <label style="font-size: 0.8rem;-webkit-transform: translateY(-180%);transform: translateY(-180%);">Brand Name</label>
-                                                                <input name="brand" type="text" value="<?php echo $row['brand']; ?>" class="required validate" required>
-                                                            </div>
-                                                            <div class="input-field col s6">
-                                                                <label style="font-size: 0.8rem;-webkit-transform: translateY(-180%);transform: translateY(-180%);">Style</label>
-                                                                <input name="style" type="text" value="<?php echo $row['style']; ?>" class="required validate" required>
-                                                            </div>
-
-
-                                                            <div class="input-field col s6">
-                                                                <label style="font-size: 0.8rem;-webkit-transform: translateY(-180%);transform: translateY(-180%);">SKU</label>
-                                                                <input name="sku" type="text" value="<?php echo $row['sku']; ?>" class="required validate" required>
-                                                            </div>
-                                                            <div class="input-field col s6">
-                                                                <label style="font-size: 0.8rem;-webkit-transform: translateY(-180%);transform: translateY(-180%);">Size</label>
-                                                                <select name="size" required>
-                                                                    <option selected disabled value="">Select One
-                                                                    </option>
+                                                                    <option value="<?php echo $data1['name']; ?>"
+                                                                            <?php if ($data1['name'] == $row['category']){ ?>selected<?php } else {
+                                                                    } ?>><?php echo $data1['name']; ?></option>
                                                                     <?php
-                                                                    while ($data3 = mysqli_fetch_assoc($sql3)) {
-                                                                        ?>
-                                                                        <option value="<?php echo $data3['name']; ?>" <?php if ($data3['name'] == $row['size']){ ?>selected<?php } else {} ?>><?php echo $data3['name']; ?></option>
-                                                                        <?php
-                                                                    }
+                                                                }
+                                                                ?>
+                                                            </select>
+                                                        </div>
+                                                        <div class="input-field col s6">
+                                                            <label style="font-size: 0.8rem;-webkit-transform: translateY(-180%);transform: translateY(-180%);">Product Name</label>
+                                                            <input name="pname" type="text" value="<?php echo $row['productName']; ?>" class="required validate" required>
+
+                                                        </div>
+                                                        <div class="input-field col s6">
+                                                            <label style="font-size: 0.8rem;-webkit-transform: translateY(-180%);transform: translateY(-180%);">Brand Name</label>
+                                                            <input name="brand" type="text" value="<?php echo $row['brand']; ?>" class="required validate" required>
+                                                        </div>
+                                                        <div class="input-field col s6">
+                                                            <label style="font-size: 0.8rem;-webkit-transform: translateY(-180%);transform: translateY(-180%);">Style</label>
+                                                            <input name="style" type="text" value="<?php echo $row['style']; ?>" class="required validate" required>
+                                                        </div>
+
+
+                                                        <div class="input-field col s6">
+                                                            <label style="font-size: 0.8rem;-webkit-transform: translateY(-180%);transform: translateY(-180%);">SKU</label>
+                                                            <input name="sku" type="text" value="<?php echo $row['sku']; ?>" class="required validate" required>
+                                                        </div>
+                                                        <div class="input-field col s6">
+                                                            <label style="font-size: 0.8rem;-webkit-transform: translateY(-180%);transform: translateY(-180%);">Size</label>
+                                                            <select name="size" required>
+                                                                <option selected disabled value="">Select One
+                                                                </option>
+                                                                <?php
+                                                                while ($data3 = mysqli_fetch_assoc($sql3)) {
                                                                     ?>
-                                                                </select>
-
-                                                            </div>
-
-
-                                                            <div class="input-field col s6">
-                                                                <label style="font-size: 0.8rem;-webkit-transform: translateY(-180%);transform: translateY(-180%);">Standard Color</label>
-                                                                <select name="standardColor" required>
-                                                                    <option selected disabled value="">Select One</option>
+                                                                    <option value="<?php echo $data3['name']; ?>" <?php if ($data3['name'] == $row['size']){ ?>selected<?php } else {} ?>><?php echo $data3['name']; ?></option>
                                                                     <?php
-                                                                    while ($data2 = mysqli_fetch_assoc($sql2)) {
-                                                                        ?>
-                                                                        <option value="<?php echo $data2['colorName']; ?>"
-                                                                        <?php if ($data2['colorName'] == $row['standardcolor']){ ?>selected<?php } else {} ?>><?php echo $data2['colorName']; ?></option>
-                                                                        <?php
-                                                                    }
+                                                                }
+                                                                ?>
+                                                            </select>
+
+                                                        </div>
+
+
+                                                        <div class="input-field col s6">
+                                                            <label style="font-size: 0.8rem;-webkit-transform: translateY(-180%);transform: translateY(-180%);">Standard Color</label>
+                                                            <select name="standardColor" required>
+                                                                <option selected disabled value="">Select One</option>
+                                                                <?php
+                                                                while ($data2 = mysqli_fetch_assoc($sql2)) {
                                                                     ?>
-                                                                </select>
-
-                                                            </div>
-
-                                                            <div class="input-field col s6">
-                                                                <label style="font-size: 0.8rem;-webkit-transform: translateY(-180%);transform: translateY(-180%);">Detailed Color</label>
-                                                                <select name="detailedColor" required>
-                                                                    <option selected disabled value="">Select One</option>
+                                                                    <option value="<?php echo $data2['colorName']; ?>"
+                                                                            <?php if ($data2['colorName'] == $row['standardcolor']){ ?>selected<?php } else {} ?>><?php echo $data2['colorName']; ?></option>
                                                                     <?php
-                                                                    while ($data4 = mysqli_fetch_assoc($sql4)) {
-                                                                        ?>
-                                                                        <option value="<?php echo $data4['colorName']; ?>"
-                                                                                <?php if ($data4['colorName'] == $row['detailedcolor']){ ?>selected<?php } else {} ?>><?php echo $data4['colorName']; ?></option>
-                                                                        <?php
-                                                                    }
+                                                                }
+                                                                ?>
+                                                            </select>
+
+                                                        </div>
+
+                                                        <div class="input-field col s6">
+                                                            <label style="font-size: 0.8rem;-webkit-transform: translateY(-180%);transform: translateY(-180%);">Detailed Color</label>
+                                                            <select name="detailedColor" required>
+                                                                <option selected disabled value="">Select One</option>
+                                                                <?php
+                                                                while ($data4 = mysqli_fetch_assoc($sql4)) {
                                                                     ?>
-                                                                </select>
+                                                                    <option value="<?php echo $data4['colorName']; ?>"
+                                                                            <?php if ($data4['colorName'] == $row['detailedcolor']){ ?>selected<?php } else {} ?>><?php echo $data4['colorName']; ?></option>
+                                                                    <?php
+                                                                }
+                                                                ?>
+                                                            </select>
 
-                                                            </div>
+                                                        </div>
 
-                                                            <div class="input-field col s6">
-                                                                <label style="font-size: 0.8rem;-webkit-transform: translateY(-180%);transform: translateY(-180%);">Status</label>
-                                                                <select name="status" required>
-                                                                    <option selected disabled value="">Select One</option>
-                                                                    <option  <?php if ($row['status'] == "Active"){ echo 'selected = "selected"';}?> value="Active">Active</option>
-                                                                    <option  <?php if ($row['status'] == "Inactive"){ echo 'selected = "selected"';}?>  value="Inactive">Inactive</option>
+                                                        <div class="input-field col s6">
+                                                            <label style="font-size: 0.8rem;-webkit-transform: translateY(-180%);transform: translateY(-180%);">Status</label>
+                                                            <select name="status" required>
+                                                                <option selected disabled value="">Select One</option>
+                                                                <option  <?php if ($row['status'] == "Active"){ echo 'selected = "selected"';}?> value="Active">Active</option>
+                                                                <option  <?php if ($row['status'] == "Inactive"){ echo 'selected = "selected"';}?>  value="Inactive">Inactive</option>
 
-                                                                </select>
+                                                            </select>
 
-                                                            </div>
+                                                        </div>
 
-                                                            <div class="input-field col s12">
-                                                                <label style="font-size: 0.8rem;-webkit-transform: translateY(-180%);transform: translateY(-180%);">Product
-                                                                    description</label>
-                                                                <textarea name="pdes" id="ckeditor" class="ckeditor"
-                                                                          style="overflow: hidden; height: 300px; border: 1px solid #ddd; margin-top: 10px;"
-                                                                          required>
+                                                        <div class="input-field col s12">
+                                                            <label style="font-size: 0.8rem;-webkit-transform: translateY(-180%);transform: translateY(-180%);">Product
+                                                                description</label>
+                                                            <textarea name="pdes" id="ckeditor" class="ckeditor"
+                                                                      style="overflow: hidden; height: 300px; border: 1px solid #ddd; margin-top: 10px;"
+                                                                      required>
                                                                 <?php echo $row['productDecription']; ?>
                                                         </textarea>
-                                                            </div>
-                                                            <div style="margin-top: 15px" class="col s12">
-                                                                <div  class="input-field col s6">
-                                                                    <label style="font-size: 0.8rem;-webkit-transform: translateY(-180%);transform: translateY(-180%);">Swatch</label>
-                                                                    <img src="assets/images/productImage/<?php echo $row['swatch']?>" alt="Swatch" height="110px">
-
-
-                                                                    <div class="input-field col s12">
-                                                                        <input type="file" name="pic1" value="upload Image" accept="image/*">
-                                                                    </div>
-                                                                </div>
-                                                                <div   class="input-field col s6">
-                                                                    <label style="font-size: 0.8rem;-webkit-transform: translateY(-180%);transform: translateY(-180%);">Main Image</label>
-                                                                    <img src="assets/images/productImage/<?php echo $row['mainImage']?>" alt="Main Image" height="110px">
-
-
-                                                                    <div class="input-field col s12">
-                                                                        <input type="file" name="pic2"  value="upload Image" accept="image/*">
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div style="margin-top: 15px" class="col s12">
-                                                                <div  class="input-field col s6">
-                                                                    <label style="font-size: 0.8rem;-webkit-transform: translateY(-180%);transform: translateY(-180%);">Outfit</label>
-                                                                    <img src="assets/images/productImage/<?php echo $row['outfit']?>" alt="Outfit" height="110px">
-
-
-                                                                    <div class="input-field col s12">
-                                                                        <input type="file" name="pic3" value="upload Image" accept="image/*">
-                                                                    </div>
-                                                                </div>
-                                                                <div   class="input-field col s6">
-                                                                    <label style="font-size: 0.8rem;-webkit-transform: translateY(-180%);transform: translateY(-180%);">Image 2</label>
-                                                                    <img src="assets/images/productImage/<?php echo $row['image2']?>" alt="Image2" height="110px">
-
-
-                                                                    <div class="input-field col s12">
-                                                                        <input type="file" name="pic4"  value="upload Image" accept="image/*">
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <?php
-                                                        }
-                                                        ?>
-                                                        <div style="margin-top: 40px" class="input-field col s12">
-                                                            <input  formaction="updateBarcode.php?id=<?php echo $id ?>" class="waves-effect waves-light btn red"  type="submit" name="save" value="Submit"></input>
                                                         </div>
-                                                    </form>
+                                                        <div style="margin-top: 15px" class="col s12">
+                                                            <div  class="input-field col s6">
+                                                                <label style="font-size: 0.8rem;-webkit-transform: translateY(-180%);transform: translateY(-180%);">Swatch</label>
+                                                                <img src="assets/images/productImage/<?php echo $row['swatch']?>" alt="Swatch" height="110px">
 
-                                                </div>
+
+                                                                <div class="input-field col s12">
+                                                                    <input type="file" name="pic1" value="upload Image" accept="image/*">
+                                                                </div>
+                                                            </div>
+                                                            <div   class="input-field col s6">
+                                                                <label style="font-size: 0.8rem;-webkit-transform: translateY(-180%);transform: translateY(-180%);">Main Image</label>
+                                                                <img src="assets/images/productImage/<?php echo $row['mainImage']?>" alt="Main Image" height="110px">
+
+
+                                                                <div class="input-field col s12">
+                                                                    <input type="file" name="pic2"  value="upload Image" accept="image/*">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div style="margin-top: 15px" class="col s12">
+                                                            <div  class="input-field col s6">
+                                                                <label style="font-size: 0.8rem;-webkit-transform: translateY(-180%);transform: translateY(-180%);">Outfit</label>
+                                                                <img src="assets/images/productImage/<?php echo $row['outfit']?>" alt="Outfit" height="110px">
+
+
+                                                                <div class="input-field col s12">
+                                                                    <input type="file" name="pic3" value="upload Image" accept="image/*">
+                                                                </div>
+                                                            </div>
+                                                            <div   class="input-field col s6">
+                                                                <label style="font-size: 0.8rem;-webkit-transform: translateY(-180%);transform: translateY(-180%);">Image 2</label>
+                                                                <img src="assets/images/productImage/<?php echo $row['image2']?>" alt="Image2" height="110px">
+
+
+                                                                <div class="input-field col s12">
+                                                                    <input type="file" name="pic4"  value="upload Image" accept="image/*">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <?php
+                                                    }
+                                                    ?>
+                                                    <div style="margin-top: 40px" class="input-field col s12">
+                                                        <input  formaction="updateBarcode.php?id=<?php echo $id ?>" class="waves-effect waves-light btn red"  type="submit" name="save" value="Submit"></input>
+                                                    </div>
+                                                </form>
+
                                             </div>
-
                                         </div>
+
                                     </div>
-                                </section>
+                                </div>
+                            </section>
 
 
 
-                            </div>
+                        </div>
 
                     </div>
                 </div>
@@ -407,25 +404,20 @@ include ('connection.php')?>
 
 <script type="text/javascript" src="assets/ckeditor/ckeditor.js"></script>
 
+<script>
+    $(function() {
+        var pgurl = window.location.href.
+        substr(window.location.href.lastIndexOf("/")+1);
+        $(".menu li").each(function(){
+            if(pgurl==''){
+                $(".nav li:eq(1)").addClass("active");
+            }else
+            if($('a',this).attr("href") == pgurl || $('a', this).attr("href") == '')
+                $(this).addClass("active");
+        })
+    });
+</script>
 
-
-<!--<script>-->
-<!---->
-<!--    $(function() {-->
-<!---->
-<!--        var pgurl = window.location.href.-->
-<!--        substr(window.location.href.lastIndexOf("/")+1);-->
-<!---->
-<!--        $(".menu li").each(function(){-->
-<!---->
-<!--            if(pgurl==''){-->
-<!--                $(".nav li:eq(1)").addClass("active");-->
-<!--            }else-->
-<!--            if($('a',this).attr("href") == pgurl || $('a', this).attr("href") == '')-->
-<!--                $(this).addClass("active");-->
-<!--        })-->
-<!--    });-->
-<!--</script>-->
 </body>
 
 

@@ -174,7 +174,7 @@
 
                                 <span class="card-title">Stock</span>
                                 <table border="1" >
-                                    <th></th>
+                                    <tr>
                                     <th>Product Name</th>
                                     <th>Category</th>
                                     <th> Colour</th>
@@ -182,168 +182,203 @@
                                     <th>Price </th>
                                     <th>Stock</th>
                                     <th>Available</th>
-                                    <th>Remaining Stock</th
-                                    <tbody style="border: 1px solid #ddd;">
+                                    <th>Remaining Stock</th>
+                                    </tr>
+                                        <tbody>
                                         <tr>
-                                            <td>Women</td>
-                                            <td>
-                                                <table >
-                                                    <tbody>
-                                                        <tr >
-                                                            <td>T-shirt</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>Saree</td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                            </td>
-                                            <td>
 
-                                                <table >
-                                                    <tbody>
-                                                        <tr >
-                                                            <td>S</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>M</td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-
-                                            </td>
-                                            <td>
-
-                                                <table>
-                                                    <tr>
-                                                        <td>1</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>2</td>
-                                                    </tr>
-                                                </table>
-
-                                            </td>
-                                            <td>
-
-                                                <table>
-                                                    <tr>
-                                                        <td>5</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>9</td>
-                                                    </tr>
-                                                </table>
-
-                                            </td>
-                                            <td>
-
-                                                <table>
-                                                    <tr>
-                                                        <td>344</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>48</td>
-                                                    </tr>
-                                                </table>
-
-                                            </td>
-                                        </tr> 
-
-                                        <tr>
-                                            <td>Men</td>
-                                            <td>
-
-                                                <table >
-                                                    <tbody>
-                                                        <tr >
-                                                            <td>T-shirt</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>Saree</td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-
-                                            </td>
-
-                                            <td>
-
-                                                <table >
-                                                    <tbody>
-                                                        <tr >
-                                                            <td>S</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>M</td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-
-                                            </td>
-                                            <td>
-
-                                                <table>
-                                                    <tr>
-                                                        <td>1</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>2</td>
-                                                    </tr>
-                                                </table>
-
-                                            </td>
-                                            <td>
-
-                                                <table>
-                                                    <tr>
-                                                        <td>5</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>9</td>
-                                                    </tr>
-                                                </table>
-
-                                            </td>
-                                            <td>
-
-                                                <table>
-                                                    <tr>
-                                                        <td>344</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>48</td>
-                                                    </tr>
-                                                </table>
-
-                                            </td>
-                                            <td>
-
-                                                <table>
-                                                    <tr>
-                                                        <td>10</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>48</td>
-                                                    </tr>
-                                                </table>
-
-                                            </td>
-                                            <td>
-
-                                                <table>
-                                                    <tr>
-                                                        <td>8</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>11</td>
-                                                    </tr>
-                                                </table>
-
-                                            </td>
+                                            <td>Bordeaux low-back satin gown></td>
+                                            <td>Womenswear>Gowns</td>
+                                            <td>Bordeaux</td>
+                                            <td>S</td>
+                                            <td>350</td>
+                                            <td>20</td>
+                                            <td>12</td>
+                                            <td>8</td>
                                         </tr>
+                                    <tr>
 
+                                        <td>Bordeaux low-back satin gown></td>
+                                        <td>Womenswear>Gowns</td>
+                                        <td>Bordeaux</td>
+                                        <td>M</td>
+                                        <td>150</td>
+                                        <td>10</td>
+                                        <td>2</td>
+                                        <td>8</td>
+                                    </tr>
+                                    <tr>
+
+                                        <td>Bordeaux low-back satin gown></td>
+                                        <td>Womenswear>Gowns</td>
+                                        <td>Bordeaux</td>
+                                        <td>L</td>
+                                        <td>50</td>
+                                        <td>30</td>
+                                        <td>15</td>
+                                        <td>15</td>
+                                    </tr>
                                     </tbody>
+<!--                                    <tbody style="border: 1px solid #ddd;">-->
+<!--                                        <tr>-->
+<!--                                            <td>-->
+<!--                                                <table >-->
+<!--                                                    <tbody>-->
+<!--                                                        <tr >-->
+<!--                                                            <td>T-shirt</td>-->
+<!--                                                        </tr>-->
+<!--                                                        <tr>-->
+<!--                                                            <td>Saree</td>-->
+<!--                                                        </tr>-->
+<!--                                                    </tbody>-->
+<!--                                                </table>-->
+<!--                                            </td>-->
+<!--                                            <td>-->
+<!---->
+<!--                                                <table >-->
+<!--                                                    <tbody>-->
+<!--                                                        <tr >-->
+<!--                                                            <td>S</td>-->
+<!--                                                        </tr>-->
+<!--                                                        <tr>-->
+<!--                                                            <td>M</td>-->
+<!--                                                        </tr>-->
+<!--                                                    </tbody>-->
+<!--                                                </table>-->
+<!---->
+<!--                                            </td>-->
+<!--                                            <td>-->
+<!---->
+<!--                                                <table>-->
+<!--                                                    <tr>-->
+<!--                                                        <td>1</td>-->
+<!--                                                    </tr>-->
+<!--                                                    <tr>-->
+<!--                                                        <td>2</td>-->
+<!--                                                    </tr>-->
+<!--                                                </table>-->
+<!---->
+<!--                                            </td>-->
+<!--                                            <td>-->
+<!---->
+<!--                                                <table>-->
+<!--                                                    <tr>-->
+<!--                                                        <td>5</td>-->
+<!--                                                    </tr>-->
+<!--                                                    <tr>-->
+<!--                                                        <td>9</td>-->
+<!--                                                    </tr>-->
+<!--                                                </table>-->
+<!---->
+<!--                                            </td>-->
+<!--                                            <td>-->
+<!---->
+<!--                                                <table>-->
+<!--                                                    <tr>-->
+<!--                                                        <td>344</td>-->
+<!--                                                    </tr>-->
+<!--                                                    <tr>-->
+<!--                                                        <td>48</td>-->
+<!--                                                    </tr>-->
+<!--                                                </table>-->
+<!---->
+<!--                                            </td>-->
+<!--                                        </tr> -->
+<!---->
+<!--                                        <tr>-->
+<!--                                          -->
+<!--                                            <td>-->
+<!---->
+<!--                                                <table >-->
+<!--                                                    <tbody>-->
+<!--                                                        <tr >-->
+<!--                                                            <td>T-shirt</td>-->
+<!--                                                        </tr>-->
+<!--                                                        <tr>-->
+<!--                                                            <td>Saree</td>-->
+<!--                                                        </tr>-->
+<!--                                                    </tbody>-->
+<!--                                                </table>-->
+<!---->
+<!--                                            </td>-->
+<!---->
+<!--                                            <td>-->
+<!---->
+<!--                                                <table >-->
+<!--                                                    <tbody>-->
+<!--                                                        <tr >-->
+<!--                                                            <td>S</td>-->
+<!--                                                        </tr>-->
+<!--                                                        <tr>-->
+<!--                                                            <td>M</td>-->
+<!--                                                        </tr>-->
+<!--                                                    </tbody>-->
+<!--                                                </table>-->
+<!---->
+<!--                                            </td>-->
+<!--                                            <td>-->
+<!---->
+<!--                                                <table>-->
+<!--                                                    <tr>-->
+<!--                                                        <td>1</td>-->
+<!--                                                    </tr>-->
+<!--                                                    <tr>-->
+<!--                                                        <td>2</td>-->
+<!--                                                    </tr>-->
+<!--                                                </table>-->
+<!---->
+<!--                                            </td>-->
+<!--                                            <td>-->
+<!---->
+<!--                                                <table>-->
+<!--                                                    <tr>-->
+<!--                                                        <td>5</td>-->
+<!--                                                    </tr>-->
+<!--                                                    <tr>-->
+<!--                                                        <td>9</td>-->
+<!--                                                    </tr>-->
+<!--                                                </table>-->
+<!---->
+<!--                                            </td>-->
+<!--                                            <td>-->
+<!---->
+<!--                                                <table>-->
+<!--                                                    <tr>-->
+<!--                                                        <td>344</td>-->
+<!--                                                    </tr>-->
+<!--                                                    <tr>-->
+<!--                                                        <td>48</td>-->
+<!--                                                    </tr>-->
+<!--                                                </table>-->
+<!---->
+<!--                                            </td>-->
+<!--                                            <td>-->
+<!---->
+<!--                                                <table>-->
+<!--                                                    <tr>-->
+<!--                                                        <td>10</td>-->
+<!--                                                    </tr>-->
+<!--                                                    <tr>-->
+<!--                                                        <td>48</td>-->
+<!--                                                    </tr>-->
+<!--                                                </table>-->
+<!---->
+<!--                                            </td>-->
+<!--                                            <td>-->
+<!---->
+<!--                                                <table>-->
+<!--                                                    <tr>-->
+<!--                                                        <td>8</td>-->
+<!--                                                    </tr>-->
+<!--                                                    <tr>-->
+<!--                                                        <td>11</td>-->
+<!--                                                    </tr>-->
+<!--                                                </table>-->
+<!---->
+<!--                                            </td>-->
+<!--                                        </tr>-->
+<!---->
+<!--                                    </tbody>-->
                                        
                                      
                                 </table>

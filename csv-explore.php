@@ -197,7 +197,7 @@ include ('connection.php')?>
                         <div>
                             <h5>CSV Export Form</h5>
                             <section>
-                                <div class="wizard-content">
+                                <div class="content">
                                     <div class="row">
                                         <div class="col m12">
 <!--                                            <div class="row">-->
